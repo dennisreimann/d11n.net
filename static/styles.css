@@ -1,0 +1,76 @@
+:root {
+  --color-light: #fff;
+  --color-dark: #222;
+  --color-accent: #f9aa4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: DINLight;
+  src: url(/static/fonts/DINWeb-Light-99053675e3.woff) format("woff");
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: DINCondBold;
+  src: url(/static/fonts/DINWeb-CondBold-b97c3a8731.woff) format("woff");
+}
+
+html {
+  font-family: Avenir,Helvetica,Arial,sans-serif;
+  line-height: 1.65;
+  height: 100%;
+}
+
+body {
+  color: var(--color-dark);
+  background: var(--color-light);
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--color-light);
+    background: var(--color-dark);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: DINCondBold,Avenir,Helvetica,Arial,sans-serif;
+  font-weight:normal;
+  font-style: italic;
+  letter-spacing: -.06em;
+}
+
+/* Layout */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  position: relative;
+  font-size: 10vw;
+}
+
+h1:before {
+  --size-circle: 1em;
+  position: absolute;
+  z-index: -1;
+  top: 17.5%;
+  left: -11%;
+  content: '';
+  height: var(--size-circle);
+  width: var(--size-circle);
+  border-radius: 50%;
+  background: var(--color-accent);
+}
