@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "name": "d11n.net",
+  "description": "My website for Bitcoin related content.",
+  "repository": "git@github.com:dennisreimann/d11n.net.git",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "config": {
+    "deployment": {
+      "command": "rsync -ravzulO --chmod=u=rwX,g=rX --delete-after --exclude-from=.rsync-exclude",
+      "target": "dreimann@d11n.net:virtual/d11n.net"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "start": "npm-run-all clean -p start:*",
+    "start:pages": "npm run build:pages -- --watch --pretty",
+    "start:serve": "browser-sync start --config browser-sync.config.js --watch",
+    "build": "npm-run-all clean -p build:*",
+    "build:pages": "pug pages --out dist",
+    "deploy": "$npm_package_config_deployment_command dist/ static/ $npm_package_config_deployment_target"
+  },
+  "devDependencies": {
+    "browser-sync": "2.26.7",
+    "highlight.js": "9.16.2",
+    "jstransformer-markdown-it": "2.1.0",
+    "markdown-it": "10.0.0",
+    "npm-run-all": "4.1.5",
+    "pug-cli": "1.0.0-alpha6"
+  }
+}
