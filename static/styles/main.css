@@ -1,7 +1,10 @@
 :root {
   --color-light: #fff;
-  --color-dark: #222;
-  --color-accent: #f9aa4b;
+  --color-neutral-90: #192734;
+  --color-neutral-95: #15202b;
+  --color-accent-azure: #1da1f2;
+  --color-accent-orange: #f45d22;
+  --color-accent-yellow: #ffac33;
 }
 
 * {
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  color: var(--color-dark);
+  color: var(--color-neutral-95);
   background: var(--color-light);
   height: 100%;
 }
@@ -27,7 +30,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     color: var(--color-light);
-    background: var(--color-dark);
+    background: var(--color-neutral-95);
   }
 }
 
@@ -50,7 +53,7 @@ svg {
 }
 
 .accent {
-  fill: var(--color-accent);
+  fill: var(--color-accent-yellow);
 }
 
 .color {
