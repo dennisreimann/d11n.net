@@ -19,7 +19,7 @@
     "start:pages": "npm run build:pages -- --watch --pretty",
     "start:serve": "browser-sync start --config browser-sync.config.js --watch",
     "build": "npm-run-all clean -p build:*",
-    "build:pages": "pug pages --out dist",
+    "build:pages": "pug pages -O pug.config.js --out dist",
     "deploy": "$npm_package_config_deployment_command dist/ static/ $npm_package_config_deployment_target"
   },
   "devDependencies": {
