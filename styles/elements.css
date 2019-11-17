@@ -14,7 +14,6 @@ html {
   @media print {
     font-size: 12pt;
   }
-
   @media (--up_to_M) {
     font-size: 16px;
   }
@@ -27,21 +26,245 @@ html {
 }
 
 body {
-  color: var(--color-neutral-95);
-  background: var(--color-light);
   height: 100%;
-}
+  color: var(--color-white);
+  background: var(--color-neutral-90);
+  /*
+  transition-property: color, background;
+  transition-duration: var(--transition-duration-slow);
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--color-light);
-    background: var(--color-neutral-95);
+  @media (prefers-color-scheme: light) {
+    color: var(--color-neutral-90);
+    background: var(--color-white);
   }
+  */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-head);
-  /* font-weight: bold; */
-  /* font-style: italic; */
-  letter-spacing: -.06em;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -.015em;
+  text-shadow: .1em .1em 1px var(--color-neutral-95);
+
+  /* header-anchor */
+  position: relative;
+
+  & .header-anchor {
+    position: absolute;
+    left: -.75em;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: var(--transition-duration-fast);
+  }
+
+  @media (--L_and_up) {
+    &:hover,
+    &:focus {
+      & .header-anchor {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+h1 {
+  line-height: 1.1;
+  margin-bottom: var(--space-m);
+  font-size: var(--font-size-xl);
+
+  @media (--L_and_up) {
+    font-size: var(--font-size-xxl);
+  }
+}
+
+h2 {
+  line-height: 1.1;
+  padding-top: var(--space-m);
+  margin-bottom: var(--space-m);
+  font-size: var(--font-size-l);
+
+  @media (--L_and_up) {
+    font-size: var(--font-size-xl);
+  }
+}
+
+h3 {
+  line-height: 1.25;
+  padding-top: var(--space-m);
+  margin-bottom: var(--space-m);
+  font-size: var(--font-size-l);
+
+  @media (--L_and_up) {
+    font-size: var(--font-size-xl);
+  }
+}
+
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  padding-top: var(--space-l);
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-m);
+
+  @media (--L_and_up) {
+    font-size: var(--font-size-l);
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-neutral-50);
+
+  @nest pre + & {
+    margin-top: var(--space-xl);
+  }
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: var(--transition-duration-fast);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-highlight);
+    text-decoration: underline;
+  }
+}
+
+section {
+  margin-bottom: var(--space-xxl);
+}
+
+p {
+  margin-bottom: var(--space-l);
+}
+
+ul,
+ol{
+  margin-bottom: var(--space-l);
+
+  & li + li {
+    margin-top: var(--space-s);
+  }
+}
+
+pre,
+code {
+  white-space: pre;
+  font-family: var(--font-family-code);
+  font-size: var(--font-size-code);
+}
+
+pre {
+  overflow-x: auto;
+}
+
+pre,
+figure {
+  margin: var(--space-l) calc(var(--pre-space) * -1);
+  padding: var(--pre-space);
+  color: var(--color-white);
+  background: var(--color-neutral-95);
+
+  @media (--up_to_L) {
+    --pre-space: var(--space-m);
+  }
+
+  @media (--L_and_up) {
+    --pre-space: var(--space-l);
+    border-radius: var(--space-xs);
+  }
+}
+
+code {
+  color: var(--color-white);
+  background: var(--color-neutral-95);
+  border-radius: var(--space-xs);
+}
+
+pre code,
+mark code {
+  padding: 0;
+  background: none;
+}
+
+blockquote {
+  hyphens: manual;
+  color: var(--color-neutral-80);
+  position: relative;
+  padding-left: 2em;
+
+  &::before {
+    content: "„";
+    position: absolute;
+    font-family: Georgia;
+    top: -.75em;
+    left: .05em;
+    font-size: 3em;
+    color: var(--color-neutral-40);
+  }
+}
+
+code,
+mark {
+  padding: .025em .3em;
+  border-radius: var(--space-xxs);
+}
+
+mark,
+mark code {
+  color: var(--color-neutral-80);
+  background: var(--color-accent);
+}
+
+ul {
+  margin-left: var(--space-m);
+}
+
+ol {
+  margin-left: calc(var(--space-m) * 1.15);
+}
+
+figure {
+  background: var(--color-neutral-95);
+  text-align: center;
+
+  & img {
+    display: block;
+    margin: var(--space-s) auto;
+    max-width: 100%;
+  }
+
+  & figcaption {
+    display: inline-block;
+    margin-top: var(--space-l);
+    color: var(--color-neutral-40);
+    text-align: left;
+    font-size: .9em;
+    font-style: italic;
+  }
+}
+
+p,
+ul,
+ol,
+blockquote {
+  & + h2 {
+    margin-top: var(--space-xl);
+  }
+
+  & +  h3,
+  & +  h4,
+  & +  h5,
+  & +  h6 {
+    margin-top: var(--space-l);
+  }
 }

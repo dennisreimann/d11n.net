@@ -1,0 +1,10 @@
+extends /template.pug
+
+block vars
+  - const title = 'The Payment Channel Lifecycle'
+  - const tags = ['Bitcoin', 'Lightning Network']
+  - const createdAtDate = '2019-05-06'
+  - const createdAtBlock = 574853
+
+block body
+  include:markdown-it ../articles/lightning-network-payment-channel-lifecycle.md

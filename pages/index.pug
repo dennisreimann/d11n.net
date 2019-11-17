@@ -1,4 +1,9 @@
 extends /template.pug
 
 block body
-  include /logo.svg
+  :markdown-it
+    # Articles
+
+    * [How channel capacity and liquidity affect payment routing](/lightning-network-routing-payments-liquidity.html)
+    * [The Payment Channel Lifecycle](/lightning-network-payment-channel-lifecycle.html)
+    * [Building an API around Bitcoin and LND RPC](/bitcoin-lnd-rpc-api-express.html)

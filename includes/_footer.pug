@@ -1,0 +1,9 @@
+footer.footer
+  .wrap
+    if createdAtBlock
+      p
+        | Published at block height #{createdAtBlock}
+        if createdAtDate
+          = ` (${createdAtDate})`
+        | .
+    p Website last updated at block height
