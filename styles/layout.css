@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  @media (screen) {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.header {
+  display: flex;
+  color: var(--color-light);
+  background: var(--color-neutral-95);
+}
+
+.logo {
+  display: block;
+  color: var(--color-light);
+  width: 100px;
+  padding: var(--space-m) var(--layout-space-x);
+}
+
+.main {
+  flex: 1;
+  padding: var(--space-l) var(--layout-space-x);
+
+}
+
+.footer {
+  color: var(--color-light);
+  background: var(--color-neutral-95);
+  padding: var(--space-l) var(--layout-space-x);
+}
+
+.accent {
+  fill: var(--color-accent-yellow);
+}
+
+.color {
+  fill: currentColor;
+}
