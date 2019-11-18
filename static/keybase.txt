@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/dennisreimann
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://d11n.net
+  * I am dennisreimann (https://keybase.io/dennisreimann) on keybase.
+  * I have a public key with fingerprint 0705 0C58 D772 AD8F BC79  164C F768 60F8 449D 2F39
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c10522af5f4e50b9fabbd84331e6c9170c834f2684f4a190383d336d840b945f0a",
+      "fingerprint": "07050c58d772ad8fbc79164cf76860f8449d2f39",
+      "host": "keybase.io",
+      "key_id": "f76860f8449d2f39",
+      "kid": "01019464a2b38f85e879bf5057161aaed42e76119592bff532b699eaaa475f6d5ab20a",
+      "uid": "34ebc0aad99cfeb43bb9cd6af4dee519",
+      "username": "dennisreimann"
+    },
+    "service": {
+      "hostname": "d11n.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1574117353,
+  "expire_in": 157680000,
+  "prev": "985aeb42529830366417bdc6c87e8c809ed0fbd21ba230ff5620c4ff21424e79",
+  "seqno": 64,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owJ4nG1Sa1BUZRhehBzAYlDLMECGY7EOrHTul1XHNS4iGVE2CJQu5/IdOFzOLufs
+AisBYg4XMWKIUaxAbTLSjGICbYYoNUezHNeSuI1AiCTahRV3QpJLZ5n41/fnm+/5
+nud5n/edt+4Jb52/V7LfiKPM++F1rx/vcrpdN8IeFUOcRXBAxmIoByxcIFcAqs2c
+IwmQEYIRFOYRmEBRViREHBAwx4gsxwk0jmEIIHkGoWCexnARJWlcxFmEgTEaEzCM
+1CgaGSdEmIUMkCjJmUCxKpJs89hSMAHzBC1QFMoKtMjxFIOQOC9SJE3CIo3jjICK
+GKMJsyyqR6GF41gVREsWDdMe5oV4/8NfzA0jDE7iLMphtEgTgKYYTiRggkJIhGWB
+gKOAIhGEIRiUE0UCQzmSYQDLsjhFiKRAsBy6kNu+YIfhgONhlhUYhhcBh2Mcx/AC
+yYq4AACBeOraVaDIbB7Q2AKQZUlVgJTHyjJUYoC0rwKJB57petpZpCGIHC0Dmya2
+KhabhbfkamiWzWZVjR6VzWH10AoBZ/7PwMxJsqANUlMUAEWVLDJkRDQmb5M8jghB
+4QhCYQRmgECRVVKAWZIXYJKGteOpAwo0S4YmWMCl4yiBMjQGYySJIxQn8CRPU4Dm
+aZgBAixyAopwLIrB2nxIbQ1wUUQRHMUB5elXBfmyBTKSuBaUzdRMVSlTZm12BUAl
+/tVLMB+dl78udFW4z6RvaszOIx/f11V/ErW4fY8t8ayezt8vcBFJdgTqmretfiam
+xTFElXwQ1/F1ur6namZ5/Ive10J18WbTxf6TlQPN15IysicemOaea+xa3nz05udz
+O6q7D3+/ovKdKuXg3l831qWaNpzZttndgI6ltbWE1g7ttsb1xU6owdGRdnd62/gR
+nyuJwnRZR9+zTXUJZPTLJiHftcu98is6R3XPNh5fVgXxw070XtCykS/0+uGQ+MQL
+gaf8x6IiLib/tGkglohXZ5Po2MmmU+MVf43bz8e853T9wV+aPfd4zS83U/LuhBx7
+wfR2RE2j+0H5UkQJcetNsbUG50B7T9RouRENn1nX9lFhfVJ7X/HpXp+5jOSGFq43
+Mk1pbdrSNnh6zXDNiVdGpxv9drwUlDKxs2tfp88KS1lQsLlLqUb13eVPnVzjqEz4
+9MuBJ9Nuv3EhsiwD+/vu004kd+pKenXp+zOvXvohnJzit/y252jeNxKYX1cyeCj5
+2w+LagsNqO1qTPB3YVn1t+ePvVmJQimlne2+1OUT6xuSMo+fHTrwfNienyP8An4f
+yY9UXb69d3rOO/eXytlbp/ZWEANbD3WM8N0Hz0H9Z96yJa2aXPpaP/Ew1undsSlh
+d0n2gc8uX8f/fH31/aHpiMOuW7fW/uOIK7JvfzdeHJlfW74/oLNxcHuAIaUg1VXU
+sDIhdV/q2Q03/B4ZOqpG7wW4rq6PGkuMolo3M7k5FfUb9a3e/wJcyMz2
+=yhWQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dennisreimann
+
+==================================================================
