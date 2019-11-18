@@ -28,6 +28,9 @@ mdTransformer.render = str => renderMd(str, {
  })
 
 // configure pug
+const siteData = require('./site-data.json')
+
 module.exports = {
-  basedir: './includes'
+  basedir: './includes',
+  siteData
 }

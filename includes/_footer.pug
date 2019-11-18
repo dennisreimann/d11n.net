@@ -6,4 +6,9 @@ footer.footer
         if createdAtDate
           = ` (${createdAtDate})`
         | .
-    p Website last updated at block height
+    if siteData.createdAtBlock
+      p
+        | Website last updated at block height #{siteData.createdAtBlock}
+        if siteData.createdAtDate
+          = ` (${siteData.createdAtDate})`
+        | .

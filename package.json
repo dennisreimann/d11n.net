@@ -14,12 +14,13 @@
     }
   },
   "scripts": {
-    "clean": "rm -rf dist/*",
-    "start": "npm-run-all clean -p start:*",
+    "clean": "rm -rf site-data.json dist/* ",
+    "init": "node tasks/generate_site_data.js",
+    "start": "npm-run-all clean init -p start:*",
     "start:pages": "npm run build:pages -- --watch --pretty",
     "start:styles": "npm run build:styles -- --watch",
     "start:serve": "browser-sync start --config browser-sync.config.js --watch",
-    "build": "npm-run-all clean -p build:* -s optimize",
+    "build": "npm-run-all clean init -p build:* -s optimize",
     "build:pages": "pug pages -O pug.config.js --out dist",
     "build:styles": "postcss styles/index.css --output dist/styles/main.css",
     "optimize": "npm-run-all -p optimize:*",
@@ -45,6 +46,7 @@
     "postcss-import": "12.0.1",
     "postcss-media-variables": "2.0.1",
     "postcss-nesting": "7.0.1",
-    "pug-cli": "1.0.0-alpha6"
+    "pug-cli": "1.0.0-alpha6",
+    "sync-request": "6.1.0"
   }
 }
