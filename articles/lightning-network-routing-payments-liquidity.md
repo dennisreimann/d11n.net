@@ -7,7 +7,7 @@ It promises faster transactions and lower fees, enabled by a network of bidirect
 This post shows how channel capacity and liquidity affect payment routing in the Lightning Network.
 
 In the article about the
-[lifecycle of a payment channel](/articles/lightning-network-payment-channel-lifecycle.html)
+[lifecycle of a payment channel](/lightning-network-payment-channel-lifecycle.html)
 we learned how basic transactions work.
 Beyond that, the Lightning Network – being a network of payment channels – enables transactions across channels as well.
 Payments can be routed across multiple hops until they reach the payee.
