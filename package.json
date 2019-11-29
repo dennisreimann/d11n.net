@@ -28,7 +28,7 @@
     "deploy": "$npm_package_config_deployment_command dist/ static/ $npm_package_config_deployment_target"
   },
   "devDependencies": {
-    "autoprefixer": "9.7.1",
+    "autoprefixer": "9.7.2",
     "browser-sync": "2.26.7",
     "css-mqpacker": "7.0.0",
     "csso-cli": "3.0.0",
