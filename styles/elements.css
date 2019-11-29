@@ -239,8 +239,8 @@ figure {
 
   & img {
     display: block;
-    margin: var(--space-s) auto;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   & figcaption {

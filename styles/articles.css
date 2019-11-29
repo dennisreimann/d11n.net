@@ -1,0 +1,39 @@
+
+
+@media (--L_and_up) {
+  .oxherding div {
+
+    margin: var(--space-xl) auto;
+    display: grid;
+    grid-column-gap: var(--space-xxl);
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'h f'
+      'p f'
+  }
+
+  .oxherding div:nth-child(even) {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'f h'
+      'f p'
+  }
+
+  .oxherding h3 {
+    grid-area: h;
+    align-self: end;
+  }
+
+  .oxherding p {
+    grid-area: p;
+    align-self: start;
+  }
+
+  .oxherding figure {
+    grid-area: f;
+  }
+}
+
+.oxherding figcaption {
+  display: none;
+}
