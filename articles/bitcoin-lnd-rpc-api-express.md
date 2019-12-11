@@ -231,13 +231,13 @@ In case something goes wrong we can leverage that to give the API client and use
 
 ## Conclusion
 
-I did not expect this article to become that long, but I hope it helps fellow developers *buidling* apps on top of Bitcoin and the Lightning Network.
+I did not expect this article to become that long, but I hope it helps fellow developers building apps on top of Bitcoin and the Lightning Network.
 
 In case this article has left you wanting to read more code:
 Take a look at the [Casa-Node-API repository](https://github.com/Casa/Casa-Node-API), which Casa recently open sourced.
 Their approach is similar and they are also using the Node.js/Express plus Vue.js combo, which I have come to love.
 
-In general, the Bitcoin and LND RPC APIs are nice to work with and the thrid-party libs make it even easier.
+In general, the Bitcoin and LND RPC APIs are nice to work with and the third-party libs make it even easier.
 I find it exciting to be tinkering with technology that will potentially affect an evergrowing audience of people.
 The future for both Bitcoin and Lightning look bright and we can help to shape it for generations to come.
 My hope is to contribute on the UX/UI side of this, while I am also delving deeper into the protocol level.
