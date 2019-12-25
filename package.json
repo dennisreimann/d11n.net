@@ -7,12 +7,6 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "config": {
-    "deployment": {
-      "command": "rsync -ravzulO --chmod=u=rwX,g=rX --delete-after --exclude-from=.rsync-exclude",
-      "target": "dreimann@d11n.net:virtual/d11n.net"
-    }
-  },
   "scripts": {
     "clean": "rm -rf site-data.json dist/* ",
     "init": "node tasks/generate_site_data.js",
@@ -25,14 +19,14 @@
     "build:styles": "postcss styles/index.css --output dist/styles/main.css",
     "optimize": "npm-run-all -p optimize:*",
     "optimize:styles": "csso dist/styles/main.css --output dist/styles/main.css",
-    "deploy": "$npm_package_config_deployment_command dist/ static/ $npm_package_config_deployment_target"
+    "prod": "npm-run-all build optimize"
   },
   "devDependencies": {
-    "autoprefixer": "9.7.2",
+    "autoprefixer": "9.7.3",
     "browser-sync": "2.26.7",
     "css-mqpacker": "7.0.0",
     "csso-cli": "3.0.0",
-    "highlight.js": "9.16.2",
+    "highlight.js": "9.17.1",
     "jstransformer-markdown-it": "2.1.0",
     "markdown-it": "10.0.0",
     "markdown-it-anchor": "5.2.5",
