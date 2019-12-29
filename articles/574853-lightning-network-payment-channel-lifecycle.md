@@ -1,3 +1,10 @@
+---
+title: The Payment Channel Lifecycle
+date: '2019-05-06'
+tags:
+  - Bitcoin
+  - Lightning Network
+---
 # The Payment Channel Lifecycle
 
 ## Lightning Network explained

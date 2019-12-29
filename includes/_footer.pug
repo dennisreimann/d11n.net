@@ -1,16 +1,19 @@
 footer.footer
   .wrap
-    if createdAtBlock
+    if article
       p
-        | Published at block height #{createdAtBlock}
-        if createdAtDate
-          = ` (${createdAtDate})`
+        | Published at block height #{article.block}
+        if article.date
+          = ` (${article.date})`
         | .
-    if siteData.createdAtBlock
+        if article.filename
+          = ' '
+          a(href=`https://github.com/dennisreimann/d11n.net/blob/master/articles/${article.filename}`) (GitHub)
+    if siteData
       p
-        | Website last updated at block height #{siteData.createdAtBlock}
-        if siteData.createdAtDate
-          = ` (${siteData.createdAtDate})`
+        | Website last updated at block height #{siteData.block}
+        if siteData.date
+          = ` (${siteData.date})`
         | .
   .wrap
     a(href="https://twitter.com/DennisReimann") Twitter

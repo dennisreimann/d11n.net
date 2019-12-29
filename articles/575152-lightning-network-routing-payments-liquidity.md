@@ -1,3 +1,10 @@
+---
+title: How channel capacity and liquidity affect payment routing
+date: '2019-05-08'
+tags:
+  - Bitcoin
+  - Lightning Network
+---
 # How channel capacity and liquidity affect payment routing
 
 ## Lightning Network explained

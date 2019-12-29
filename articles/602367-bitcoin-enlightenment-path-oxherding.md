@@ -1,3 +1,12 @@
+---
+title: The Path to Bitcoin Enlightenment
+date: '2019-11-04'
+tags:
+  - Bitcoin
+  - Enlightenment
+  - Oxherding
+  - Rabbit Hole
+---
 # The Path to Bitcoin Enlightenment
 
 ## Connecting the Circular Rabbit Hole with the Ten Oxherding Pictures

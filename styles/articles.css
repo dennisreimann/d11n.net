@@ -1,7 +1,7 @@
 
 
 @media (--L_and_up) {
-  .oxherding div {
+  .bitcoin-enlightenment-path-oxherding div {
 
     margin: var(--space-xl) auto;
     display: grid;
@@ -12,28 +12,28 @@
       'p f'
   }
 
-  .oxherding div:nth-child(even) {
+  .bitcoin-enlightenment-path-oxherding div:nth-child(even) {
     grid-template-columns: auto 1fr;
     grid-template-areas:
       'f h'
       'f p'
   }
 
-  .oxherding h3 {
+  .bitcoin-enlightenment-path-oxherding h3 {
     grid-area: h;
     align-self: end;
   }
 
-  .oxherding p {
+  .bitcoin-enlightenment-path-oxherding p {
     grid-area: p;
     align-self: start;
   }
 
-  .oxherding figure {
+  .bitcoin-enlightenment-path-oxherding figure {
     grid-area: f;
   }
 }
 
-.oxherding figcaption {
+.bitcoin-enlightenment-path-oxherding figcaption {
   display: none;
 }

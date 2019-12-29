@@ -1,3 +1,17 @@
+---
+title: Building an API around Bitcoin and LND RPC
+date: '2019-03-01'
+tags:
+  - Bitcoin
+  - LND
+  - Lightning Network
+  - gRPC
+  - JavaScript
+  - Node
+  - Node.js
+  - Express
+  - API
+---
 # Building an API around Bitcoin and LND RPC
 
 ## With Node.js and Express, for fun and convenience

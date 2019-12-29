@@ -1,10 +1,9 @@
 extends /template.pug
 
 block body
-  :markdown-it
-    # Articles
+  h1 Articles
 
-    * [The Path to Bitcoin Enlightenment](/bitcoin-enlightenment-path-oxherding.html)
-    * [How channel capacity and liquidity affect payment routing](/lightning-network-routing-payments-liquidity.html)
-    * [The Payment Channel Lifecycle](/lightning-network-payment-channel-lifecycle.html)
-    * [Building an API around Bitcoin and LND RPC](/bitcoin-lnd-rpc-api-express.html)
+  ul
+    each article in siteData.articles
+      li
+        a(href=`/${article.name}.html`)= article.title
