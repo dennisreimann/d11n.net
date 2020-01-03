@@ -75,10 +75,6 @@ body {
   padding-bottom: var(--space-l);
 }
 
-.footer a + a {
-  margin-left: var(--space-l);
-}
-
 @media (--M_and_up) {
   .footer .wrap {
     display: flex;

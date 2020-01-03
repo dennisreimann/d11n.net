@@ -1,5 +1,17 @@
 footer.footer
   .wrap
+    p
+      | Follow me on
+      = " "
+      a(href="https://twitter.com/DennisReimann") Twitter
+      = " or "
+      a(href="https://github.com/DennisReimann") GitHub
+      |.
+    p
+      a(href="/donate.html") Support me
+      = " with a donation."
+
+  .wrap
     if article
       p
         | Published at block height #{article.block}
@@ -15,6 +27,3 @@ footer.footer
         if siteData.date
           = ` (${siteData.date})`
         | .
-  .wrap
-    a(href="https://twitter.com/DennisReimann") Twitter
-    a(href="https://github.com/DennisReimann") GitHub

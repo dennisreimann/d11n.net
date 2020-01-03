@@ -1,0 +1,82 @@
+extends /template.pug
+
+block body
+  .donate
+    :markdown-it
+      # You feel like giving?
+
+      Maybe I have helped you in some way, you enjoy using one of
+      [my open source projects](https://github.com/dennisreimann) or the
+      contributions I made to [BTCPayServer](https://btcpayserver.org) …
+
+      Here you have the chance to say "Thank You!" by paying for my coffee, buy me a beer
+      or help me feed our cat and kids – whatever you give, I really appreciate your kindness!
+
+    .form-note
+      style.
+        .btcpay-form { display: inline-flex; align-items: center; justify-content: center; margin-bottom: 2em; }
+        .btcpay-form--inline { flex-direction: row; }
+        .btcpay-form--block { flex-direction: column; }
+        .btcpay-form--inline .submit { margin-left: 15px; }
+        .btcpay-form--block select { margin-bottom: 10px; }
+        .btcpay-form .btcpay-custom { display: flex; align-items: center; justify-content: center; }
+        .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: var(--color-neutral-50); height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto; }
+        .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; background: transparent; color: var(--color-white); border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; }
+        .btcpay-form select:hover { border-color: #ccc; }
+        #btcpay-input-price { width: 4.5em; -moz-appearance: textfield; -webkit-appearance: none; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; margin: 0 5px; background: #fff; }
+      script.
+        window.donation = {
+          btcInitial: 0.001,
+          btcStep: 0.0005,
+          btcMin: 0.0005,
+          fiatInitial: 5,
+          fiatStep: 1,
+          fiatMin: 1,
+
+          isBTC () {
+            return document.querySelector('#btcpay-currency').value === 'BTC';
+          },
+          onDecrement () {
+            const isBTC = this.isBTC();
+            const input = document.querySelector('#btcpay-input-price');
+            const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
+            const val = price - (isBTC ? this.btcStep : this.fiatStep);
+            const min = isBTC ? this.btcMin : this.fiatMin;
+            const value = val < min ? min : val;
+            input.value = isBTC ? value.toFixed(4) : value;
+          },
+          onIncrement () {
+            const isBTC = this.isBTC();
+            const currency = document.querySelector('#btcpay-currency').value;
+            const input = document.querySelector('#btcpay-input-price');
+            const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
+            const value = price + (isBTC ? this.btcStep : this.fiatStep);
+            input.value = isBTC ? value.toFixed(4) : value;
+          },
+          onCurrency () {
+            const isBTC = this.isBTC();
+            const input = document.querySelector('#btcpay-input-price');
+            input.setAttribute("min", isBTC ? this.btcMin : this.fiatMin);
+            input.setAttribute("step", isBTC ? this.btcStep : this.fiatStep);
+            input.value = isBTC ? this.btcInitial : this.fiatInitial;
+          }
+        }
+
+      <form method="POST" action="https://pay.d11n.net/api/v1/invoices" class="btcpay-form btcpay-form--block">
+        <input type="hidden" name="storeId" value="7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT" />
+        <input type="hidden" name="browserRedirect" value="https://d11n.net/thankyou.html" />
+        <input type="hidden" name="notifyEmail" value="mail@d11n.net" />
+        <div>
+          <div class="btcpay-custom">
+            <button class="plus-minus" type="button" onclick="donation.onDecrement()">-</button>
+            <input id="btcpay-input-price" type="number" name="price" min="0.0005" step="0.0005" value="0.001" />
+            <button class="plus-minus" type="button" onclick="donation.onIncrement()">+</button>
+          </div>
+          <select id="btcpay-currency" name="currency" oninput="donation.onCurrency()">
+            <option value="BTC" selected>BTC</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+          </select>
+        </div>
+        <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+      </form>
