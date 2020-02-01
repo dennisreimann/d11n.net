@@ -80,3 +80,11 @@ block body
         </div>
         <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
       </form>
+
+      script.
+        const [, a, c] = window.location.search.match(/([\d|.]+)(\w+)/) || []
+        if (a && ['BTC', 'EUR', 'USD'].includes(c)) {
+          document.querySelector('#btcpay-currency').value = c;
+          donation.onCurrency();
+          document.querySelector('#btcpay-input-price').value = a;
+        }
