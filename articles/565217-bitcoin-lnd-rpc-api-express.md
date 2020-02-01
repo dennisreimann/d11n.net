@@ -205,9 +205,9 @@ const ROUTES = [
 Here are the differences to the Bitcoin example:
 
 - The third entry in the route definition array might be an array, which lists multiple RPCs to be invoked.
-  (i.e. `getChainBalance` and `getPendingChainBalance` for the `/balance` route)
+  (e.g. `getChainBalance` and `getPendingChainBalance` for the `/balance` route)
 - The routes now also contain modifying and destructive API endpoints for adding and removing peer nodes.
-  Both of them require user input (i.e. the peers address or public key), which gets provided via the request params or form body.
+  Both of them require user input (e.g. the peers address or public key), which gets provided via the request params or form body.
 
 Again, part two instantiates the Express routes based on the definitions above:
 
