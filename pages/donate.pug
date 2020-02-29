@@ -29,6 +29,9 @@ block body
           btcInitial: 0.001,
           btcStep: 0.0005,
           btcMin: 0.0005,
+          satsInitial: 100000,
+          satsStep: 1000,
+          satsMin: 1000,
           fiatInitial: 5,
           fiatStep: 1,
           fiatMin: 1,
@@ -36,29 +39,37 @@ block body
           isBTC () {
             return document.querySelector('#btcpay-currency').value === 'BTC';
           },
+          isSats () {
+            return document.querySelector('#btcpay-currency').value === 'SATS';
+          },
           onDecrement () {
             const isBTC = this.isBTC();
+            const isSats = this.isSats();
             const input = document.querySelector('#btcpay-input-price');
             const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
-            const val = price - (isBTC ? this.btcStep : this.fiatStep);
-            const min = isBTC ? this.btcMin : this.fiatMin;
+            const step = isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep);
+            const min = isBTC ? this.btcMin : (isSats ? this.satsMin : this.fiatMin);
+            const val = price - step;
             const value = val < min ? min : val;
             input.value = isBTC ? value.toFixed(4) : value;
           },
           onIncrement () {
             const isBTC = this.isBTC();
+            const isSats = this.isSats();
             const currency = document.querySelector('#btcpay-currency').value;
             const input = document.querySelector('#btcpay-input-price');
             const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
-            const value = price + (isBTC ? this.btcStep : this.fiatStep);
+            const step = isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep);
+            const value = price + step;
             input.value = isBTC ? value.toFixed(4) : value;
           },
           onCurrency () {
             const isBTC = this.isBTC();
+            const isSats = this.isSats();
             const input = document.querySelector('#btcpay-input-price');
-            input.setAttribute("min", isBTC ? this.btcMin : this.fiatMin);
-            input.setAttribute("step", isBTC ? this.btcStep : this.fiatStep);
-            input.value = isBTC ? this.btcInitial : this.fiatInitial;
+            input.setAttribute("min", isBTC ? this.btcMin : (isSats ? this.satsMin : this.fiatMin));
+            input.setAttribute("step", isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep));
+            input.value = isBTC ? this.btcInitial : (isSats ? this.satsInitial : this.fiatInitial);
           }
         }
 
@@ -69,21 +80,22 @@ block body
         <div>
           <div class="btcpay-custom">
             <button class="plus-minus" type="button" onclick="donation.onDecrement()">-</button>
-            <input id="btcpay-input-price" type="number" name="price" min="0.0005" step="0.0005" value="0.001" />
+            <input id="btcpay-input-price" type="number" name="price" min="1000" step="1000" value="100000" />
             <button class="plus-minus" type="button" onclick="donation.onIncrement()">+</button>
           </div>
           <select id="btcpay-currency" name="currency" oninput="donation.onCurrency()">
-            <option value="BTC" selected>BTC</option>
+            <option value="SATS" selected>SATS</option>
+            <option value="BTC">BTC</option>
             <option value="EUR">EUR</option>
             <option value="USD">USD</option>
           </select>
         </div>
-        <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+        <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BTCPay, Self-Hosted Bitcoin Payment Processor">
       </form>
 
       script.
         const [, a, c] = window.location.search.match(/([\d|.]+)(\w+)/) || []
-        if (a && ['BTC', 'EUR', 'USD'].includes(c)) {
+        if (a && ['SATS', 'BTC', 'EUR', 'USD'].includes(c)) {
           document.querySelector('#btcpay-currency').value = c;
           donation.onCurrency();
           document.querySelector('#btcpay-input-price').value = a;
