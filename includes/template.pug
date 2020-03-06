@@ -3,24 +3,31 @@
 
 block vars
 
+- const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle
+
 <!DOCTYPE html>
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     meta(name="viewport" content="width=device-width,initial-scale=1")
-    meta(name="keywords" content="Bitcoin,Lightning Network")
-    meta(name="description" content="Like a rock. Like a planet. Like a fuckin' atom bomb.")
+    meta(name="keywords" content=keywords ? keywords.join(',') : "Bitcoin,Lightning Network")
+    meta(name="description" content=description || "Like a rock. Like a planet. Like a fuckin' atom bomb.")
     meta(name="theme-color" content=themeColor)
     meta(name="msapplication-TileColor" content=themeColor)
     meta(name="msapplication-config" content="/browserconfig.xml")
+    meta(property="twitter:creator" content="@dennisreimann")
+    meta(property="twitter:card" content="summary")
+    meta(property="twitter:title" content=pageTitle)
+    meta(property="twitter:description" content=description)
+    meta(property="twitter:image" content="/images/card.png")
     link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
     link(rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color=themeColor)
     link(rel="stylesheet" href="/styles/main.css")
     link(rel="manifest" href="/site.webmanifest")
-    title= title ? `${title} · ${siteTitle}` : siteTitle
+    title= pageTitle
   body
     include _header.pug
     include _main.pug

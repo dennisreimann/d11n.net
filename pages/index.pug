@@ -6,4 +6,5 @@ block body
   ul
     each article in siteData.articles
       li
+        time.block(datetime=article.date)= article.block
         a(href=`/${article.name}.html`)= article.title

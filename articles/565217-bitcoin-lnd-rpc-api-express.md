@@ -11,6 +11,9 @@ tags:
   - Node.js
   - Express
   - API
+description: |
+  I am currently building a dashboard and management application for Bitcoin full nodes with Lightning Network integration.
+  This post features how I have build parts of the API layer.
 ---
 # Building an API around Bitcoin and LND RPC
 

@@ -6,6 +6,9 @@ tags:
   - Enlightenment
   - Oxherding
   - Rabbit Hole
+description: |
+  Recently Gigi had a great thread about the idea of the Circular Rabbit Hole.
+  This very much reminded me of the buddhist idea of the journey to enlightenment described with the ten Oxherding pictures.
 ---
 # The Path to Bitcoin Enlightenment
 

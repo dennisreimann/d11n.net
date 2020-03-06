@@ -16,7 +16,7 @@ const articles = readdirSync(join(dir, 'articles')).map(filename => {
   data.name = name
   data.filename = filename
   return data
-})
+}).reverse()
 
 // blockchain
 let recentBlocks = []
@@ -38,4 +38,4 @@ const json = JSON.stringify(data, null, 2)
 writeFileSync(dst, json)
 
 // eslint-disable-next-line no-console
-console.log(`✅  Generated site-data.json\n\n${json}`)
+console.log('✅  Generated site-data.json')

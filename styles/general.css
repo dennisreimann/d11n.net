@@ -1,0 +1,11 @@
+.block {
+  margin-right: var(--space-s);
+}
+
+.note {
+  color: var(--color-neutral-40);
+  margin-left: var(--space-m);
+  margin-right: var(--space-xl);
+  border-left: var(--space-s) solid var(--color-neutral-80);
+  padding-left: var(--space-m);
+}

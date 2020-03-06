@@ -1,5 +1,10 @@
 extends /template.pug
 
+block vars
+  - const title = article.title
+  - const keywords = article.tags
+  - const description = article.description
+
 block body
   .article(class=article.name)
     != article.content
