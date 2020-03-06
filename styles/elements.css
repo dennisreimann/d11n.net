@@ -225,6 +225,14 @@ mark code {
   background: var(--color-accent);
 }
 
+mark a {
+  color: var(--color-neutral-80);
+
+  &:hover {
+    color: var(--color-neutral-90);
+  }
+}
+
 ul {
   margin-left: var(--space-m);
 }
