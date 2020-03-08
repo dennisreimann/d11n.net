@@ -1,8 +1,33 @@
+.article .image.image--no-caption figcaption {
+  display: none;
+}
 
+@media (--M_and_up) {
+  .article .image figure {
+    max-width: 45%;
+  }
+
+  .article .image.image--left figure {
+    float: left;
+    margin: 0 var(--space-l) var(--space-l) 0;
+  }
+
+  .article .image.image--right figure {
+    float: right;
+    margin: 0 0 var(--space-l) var(--space-l);
+  }
+}
 
 @media (--L_and_up) {
-  .bitcoin-enlightenment-path-oxherding div {
+  .article .image.image--left figure {
+    margin-left: calc(var(--pre-space) * -1) !important;
+  }
 
+  .article .image.image--right figure {
+    margin-right: calc(var(--pre-space) * -1) !important;
+  }
+
+  .bitcoin-enlightenment-path-oxherding div {
     margin: var(--space-xl) auto;
     display: grid;
     grid-column-gap: var(--space-xxl);

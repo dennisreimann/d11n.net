@@ -19,6 +19,10 @@ Cost averaging is a strategy that reduces the impact of volatility:
 You set up an automated investment plan and regularly buy whatever amount fits your circumstances.
 Doing so you gradually increase your bitcoin holdings while enjoying peace of mind and not having to look at price charts.
 
+<div class="image image--right image--no-caption">
+
+[![Stay humble, stack sats](/images/stacking-sats/stay-humble-stack-sats.jpg)](https://bitko.cc/product/print-4/)
+
 This is a comparatively responsible way to get started, especially if you are new to the space.
 Your initial goal might be to get rich quick, but rest assured: there are way more valuable lessons to be learned here.
 Nevertheless, having skin in the game is the best way to get used to bitcoin and engage with it as a new form of money.
@@ -28,6 +32,7 @@ Just to make sure:
 You don't have to buy full units, as a bitcoin is divisible down to eight decimal places.
 The smallest unit is called satoshi, which we Bitcoiners lovingly abbreviate as "sats".
 </p>
+</div>
 
 Cost averaging does not sound very sexy, but thanks to Matt Odell we have the [#stackingsats](https://twitter.com/matt_odell/status/1117222441867194374) meme.
 There is also a [website that illustrates the concept](https://dcabtc.com/) and you can play around with the numbers and see the results.
