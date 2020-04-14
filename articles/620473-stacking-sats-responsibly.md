@@ -73,6 +73,9 @@ In very simple terms: In a CoinJoin up to 100 people come together and each prov
 They exchange their coins and everyone randomly gets back the amount provided, minus a bit of fee that Wasabi takes for coordinating this exchange.
 This [breaks and eliminates the links](https://6102bitcoin.com/coinjoin-overview/) the funds previously had.
 
+To do so, create another wallet in Wasabi named "Storage".
+Ideally you are using a hardware wallet
+
 After you have mixed your precious sats, you should store them very securely.
 The easiest and safest way is to do so is using a hardware wallet.
 You can [connect your hardware wallet to Wasabi](https://docs.wasabiwallet.io/using-wasabi/ColdWasabi.html) and manage your funds that way.
