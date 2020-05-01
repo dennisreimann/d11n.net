@@ -1,5 +1,5 @@
 ---
-title: How channel capacity and liquidity affect payment routing
+title: How Channel Capacity and Liquidity affect Payment Routing
 date: '2019-05-08'
 tags:
   - Bitcoin
@@ -8,7 +8,7 @@ description: |
   The Lightning Network is a second layer scaling solution for Bitcoin and similar cryptocurrencies.
   This post shows how channel capacity and liquidity affect payment routing in the Lightning Network.
 ---
-# How channel capacity and liquidity affect payment routing
+# How Channel Capacity and Liquidity affect Payment Routing
 
 ## Lightning Network explained
 
