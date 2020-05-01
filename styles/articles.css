@@ -62,3 +62,26 @@
 .bitcoin-enlightenment-path-oxherding figcaption {
   display: none;
 }
+
+.say-thanks {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.say-thanks .cta {
+  margin-left: 15px;
+}
+
+.say-thanks #btcpay-input-price {
+  width: 4.25ch;
+  appearance: none;
+  border: none;
+  box-shadow: none;
+  text-align: right;
+  font-size: 1rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  margin: 0 .5rem;
+}

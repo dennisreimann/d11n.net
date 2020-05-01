@@ -139,6 +139,25 @@ a {
   }
 }
 
+button {
+  cursor: pointer;
+}
+
+button.cta {
+  color: var(--color-neutral-95);
+  background: var(--color-accent);
+  transition-property: color, background;
+  transition-duration: var(--transition-duration-fast);
+  border-radius: var(--space-xs);
+  padding: var(--space-xs) var(--space-s);
+  font-size: var(--font-size-s);
+
+  &:hover,
+  &:focus {
+    background: var(--color-accent-highlight);
+  }
+}
+
 section {
   margin-bottom: var(--space-xxl);
 }
