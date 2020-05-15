@@ -111,10 +111,10 @@ The Lighting channel-opening service [Thor by Bitrefill](https://www.bitrefill.c
 But not just merchants are dependent on inbound liquidity.
 As we have seen, customers will encounter limitations based on the length of their payment route.
 
-To accommodate for that, solutions like *Atomic Multi-Path Payments* (short: AMP) are already being worked on:
+To accommodate for that, solutions like [Multi-Path Payments](https://lightning.engineering/posts/2020-05-07-mpp/) (short: MPP) are already being worked on:
 Instead of traveling along a single route, the funds can be split up and take several different routes.
 This way larger payments will be enabled as the capacity and balance of multiple channels can be factored in.
-For example: With AMP, Alice's payment to Charlie could be split up to 2 mBTC going through Bob and the other 2 mBTC using another node D as a hop.
+For example: With MPP, Alice's payment to Charlie could be split up to 2 mBTC going through Bob and the other 2 mBTC using another node D as a hop.
 
 This is just one of many exciting features that are currently finding their way into the Lightning Network specification.
 Stay tuned for more on that 😀
