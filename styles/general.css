@@ -9,3 +9,25 @@
   border-left: var(--space-s) solid var(--color-neutral-80);
   padding-left: var(--space-m);
 }
+
+.ytEmbed {
+  display: block;
+  position: relative;
+  margin: 1rem 0 2rem;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-color: var(--btcpay-bg-dark);
+}
+
+.ytEmbed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
