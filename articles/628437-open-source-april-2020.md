@@ -27,7 +27,7 @@ The circumstances of COVID-19 like home-schooling two kids and them not being ab
 nevertheless I got a lot of stuff done and had a good time easing into this new mode.
 Fortunately the GitHub contribution activity offers a very good summary of what happened, as I already had trouble recalling everything …
 
-![Github Summary for April 2020](/images/open-source-april-2020/github-summary-april-2020.png)
+![Github Summary for April 2020](/images/open-source-reports/github-summary-2020-04.png)
 
 As you can see most of my time was spent on BTCPay Server related projects:
 We had our [biggest release ever](https://blog.btcpayserver.org/btcpay-server-1-0-4-0/), with the highlight of PayJoin functionality that Kukks and Nicolas worked on.
