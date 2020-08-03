@@ -1,7 +1,11 @@
 extends /template.pug
 
 block body
-  h1 Articles
+  :markdown-it
+    Hi, I’m [Dennis](/about.html), a freelance software developer working full-time on open source and bitcoin-related software projects.
+    This website is a collection of my projects and the articles I write.
+
+    ## Articles
 
   ul
     each article in siteData.articles
