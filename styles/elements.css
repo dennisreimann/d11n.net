@@ -283,7 +283,10 @@ figure {
 p,
 ul,
 ol,
-blockquote {
+iframe,
+blockquote,
+.ytEmbed,
+.anchorEmbed {
   & + h2 {
     margin-top: var(--space-xl);
   }
