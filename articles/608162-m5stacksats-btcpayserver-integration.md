@@ -5,6 +5,9 @@ tags:
   - BTCPay Server
   - M5StackSats
   - Open Source
+teaser: /images/m5stacksats/btcpayserver-integration.jpg
+description: |
+  There was no BTCPay Server integration for the M5StackSats project, yet. So I decided to build it as a way of learning a bit more about the new gadget.
 ---
 # BTCPay Server Integration for M5StackSats
 

@@ -5,6 +5,7 @@ tags:
   - Open Source
   - Full-time
   - BTCPay Server
+teaser: /images/open-source-reports/github-summary-2020-04.png
 description: |
   It's the first month in on my full-time open source journey and I'm loving it.
 ---

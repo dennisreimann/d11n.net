@@ -4,6 +4,7 @@ date: '2019-05-06'
 tags:
   - Bitcoin
   - Lightning Network
+teaser: /images/lightning-network/commitment-transaction-2.png
 description: |
   The Lightning Network is a second layer scaling solution for Bitcoin and similar cryptocurrencies.
   This post shows the lifecycle of a Lightning Network payment channel.

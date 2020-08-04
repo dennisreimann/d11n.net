@@ -5,10 +5,14 @@ block body
     Hi, I’m [Dennis](/about.html), a freelance software developer working full-time on open source and bitcoin-related software projects.
     This website is a collection of my projects and the articles I write.
 
-    ## Articles
 
-  ul
+  h2 Articles
+
+  ul.articles
     each article in siteData.articles
       li
-        time.block(datetime=article.date)= article.block
-        a(href=`/${article.name}.html`)= article.title
+        a(href=`/${article.name}.html`)
+          .teaser(style=`background-image:url(${article.teaser})`)
+          .content
+            h4= article.title
+            time.block(datetime=article.date)= article.block

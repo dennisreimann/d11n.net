@@ -1,7 +1,3 @@
-.block {
-  margin-right: var(--space-s);
-}
-
 .note {
   color: var(--color-neutral-40);
   margin-left: var(--space-m);

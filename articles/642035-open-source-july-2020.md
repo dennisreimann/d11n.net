@@ -8,6 +8,7 @@ tags:
   - Raspiblitz
 description: |
   Summary of my open source contributions in July 2020, which is the forth month of my full-time open source journey.
+teaser: /images/open-source-reports/github-summary-2020-07.png
 ---
 # My 4th Month of Full-Time Open Source
 

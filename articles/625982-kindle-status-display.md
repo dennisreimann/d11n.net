@@ -5,6 +5,7 @@ tags:
   - Bitcoin
   - Kindle
   - Dashboard
+teaser: /images/kindle-display/framed.jpg
 description: |
   Here's a short recap of a personal project I made during the last few days:
   A framed Bitcoin Status display for our living room that is backed by an old and unused Kindle.

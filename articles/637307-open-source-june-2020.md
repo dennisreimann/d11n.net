@@ -6,6 +6,7 @@ tags:
   - Full-time
   - BTCPay Server
   - Raspiblitz
+teaser: /images/open-source-reports/github-summary-2020-06.png
 description: |
   Summary of my open source contributions in June 2020, which is the third month of my full-time open source journey.
 ---
