@@ -7,7 +7,6 @@ module.exports = {
     require('postcss-nesting'),
     mediaVariables,
     require('postcss-custom-media'),
-    require('postcss-custom-properties'),
     require('postcss-calc'),
     mediaVariables
   ]
