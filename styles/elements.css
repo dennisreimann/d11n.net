@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   line-height: 1.1;
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
   font-size: var(--font-size-xl);
 
   @media (--L_and_up) {
