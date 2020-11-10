@@ -24,12 +24,14 @@
     "build:styles": "postcss styles/index.css --output dist/styles/main.css",
     "optimize": "npm-run-all -p optimize:*",
     "optimize:styles": "csso dist/styles/main.css --output dist/styles/main.css",
-    "prod": "npm-run-all build optimize"
+    "sitemap": "node tasks/generate_sitemap.js",
+    "prod": "npm-run-all build optimize sitemap"
   },
   "devDependencies": {
     "autoprefixer": "10.0.1",
     "browser-sync": "2.26.13",
     "csso-cli": "3.0.0",
+    "glob": "7.1.6",
     "gray-matter": "4.0.2",
     "highlight.js": "10.3.2",
     "jstransformer-markdown-it": "2.1.0",
