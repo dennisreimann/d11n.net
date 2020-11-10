@@ -24,7 +24,7 @@ The UI and user flow got some improvements and I also added proper error handlin
 ![](/images/m5stacksats/userflow-error-handling.png)
 
 A few merchants are using the M5StackSats already and there are some more things I plan to add to the integration.
-If you want to learn a bit more about this project, see [my initial post on the BTCPay Server integration](/m5stacksats-btcpayserver-integration.html), which alkso contains a quick demo video.
+If you want to learn a bit more about this project, see [my initial post on the BTCPay Server integration](/m5stacksats-btcpayserver-integration.html), which also contains a quick demo video.
 
 ## BTCPay Server UI Rebrushes
 
