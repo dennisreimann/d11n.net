@@ -135,21 +135,106 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  & .cta {
+    margin-left: 15px;
+  }
+
+  & #btcpay-input-price {
+    width: 4.25ch;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    text-align: right;
+    font-size: 1rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    margin: 0 .5rem;
+
+    /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    -moz-appearance: textfield;
+  }
 }
 
-.say-thanks .cta {
-  margin-left: 15px;
-}
+.advent-calendar {
+  --border-color: var(--color-neutral-70);
 
-.say-thanks #btcpay-input-price {
-  width: 4.25ch;
-  appearance: none;
-  border: none;
-  box-shadow: none;
-  text-align: right;
-  font-size: 1rem;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  margin: 0 .5rem;
+  & ol {
+    list-style: none;
+    margin: var(--space-xl) var(--space-m);
+
+    & > li {
+      border-top: 2px dashed;
+      border-color: var(--border-color);
+      margin:0;
+      padding: var(--space-xl);
+      counter-increment: section;
+      position: relative;
+
+      &:first-child {
+        padding-top: 0;
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      &:last-child {
+        border-bottom: 2px dashed var(--border-color);
+      }
+
+      & > *:last-child,
+      & > *:last-child > p {
+        margin-bottom: 0;
+      }
+
+      &:before {
+        content: counter(section);
+        position: absolute;
+        margin-top: -.5em;
+        border-radius: 50%;
+        padding: var(--space-s);
+        height: var(--space-l);
+        width: var(--space-l);
+        background-color: var(--color-accent);
+        text-align: center;
+        color: var(--color-neutral-80);
+        font-family: var(--font-family-code);
+        font-weight: bold;
+      }
+
+      &:nth-child(odd) {
+        border-left: 2px dashed var(--border-color);
+        border-top-left-radius: var(--space-l);
+        border-bottom-left-radius: var(--space-l);
+        margin-right: var(--space-l);
+        padding-right: 0;
+
+        &:before {
+          right: 100%;
+          margin-right: calc(var(--space-l) / -1.25);
+        }
+      }
+
+      &:nth-child(even) {
+        border-right: 2px dashed var(--border-color);
+        border-top-right-radius: var(--space-l);
+        border-bottom-right-radius: var(--space-l);
+        margin-left: var(--space-l);
+        padding-left: 0;
+
+        &:before {
+          left: 100%;
+          margin-left: calc(var(--space-l) / -1.25) ;
+        }
+      }
+    }
+  }
 }

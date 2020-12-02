@@ -215,7 +215,7 @@ mark code {
 
 blockquote {
   hyphens: manual;
-  color: var(--color-neutral-80);
+  color: var(--color-neutral-40);
   position: relative;
   padding-left: 2em;
 
@@ -226,7 +226,7 @@ blockquote {
     top: -.75em;
     left: .05em;
     font-size: 3em;
-    color: var(--color-neutral-40);
+    color: var(--color-neutral-50);
   }
 }
 
