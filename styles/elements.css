@@ -148,7 +148,7 @@ button.cta {
   transition-duration: var(--transition-duration-fast);
   border-radius: var(--space-xs);
   padding: var(--space-xs) var(--space-s);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-m);
 
   &:hover,
   &:focus {
