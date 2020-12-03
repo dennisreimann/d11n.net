@@ -32,7 +32,7 @@ I hope you enjoy these as much as I do …
     - Hal Finney's [RPOW](https://nakamotoinstitute.org/finney/rpow/index.html) (reusable proofs of work) expanded on Adam Back's hashcash ideas,
       but never left the experimental proof of concept stage.
 
-    As they've seen numerous attempts before, most members of the Cryptography Mailing List received the announcement of Bitcoin rather critically.
+    As they've seen numerous attempts before, most members of the Cryptography Mailing List received the announcement of Bitcoin rather critically. 🧐
     E.g. John Levine addressed the potential computing power attack vector known as the "51% attack" and [wrote](https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/1/#014817):
 
     > Bad guys routinely control zombie farms of 100,000 machines or more. […]<br>
@@ -46,7 +46,7 @@ I hope you enjoy these as much as I do …
 
     He wrote this on November 07, 2008 – one week after after Satoshi published the [Bitcoin whitepaper](http://www.bitcoin.org/bitcoin.pdf).
     This value proposition was apparent to him in conjunction with the global financial crisis, which was just unfolding.
-    Bitcoin had been born as a potential antidote – to dismantle the power of centralized institutions, which are known to adjust the monetary supply as they see fit.
+    Bitcoin had been born as a potential antidote – to dismantle the power of centralized institutions, which are known to adjust the monetary supply as they see fit. 🖨💸
 
     Twelve years later, in the midst of the Corona pandemic and the central bank reactions it entails, this becomes obvious to an ever growing number of people.
     Today, I'm truely thankful for Satoshi and all the cypherpunks like Hal, that have started to work on alternatives at just the right time.
@@ -58,12 +58,38 @@ I hope you enjoy these as much as I do …
     > Current estimates of total worldwide household wealth that I have found range from $100 trillion to $300 trillion.
     > With 20 million coins, that gives each coin a value of about $10 million.
 
-    Reading this at face value, this experiment doesn't fully work out for me.
+    Reading this at face value, the thought experiment doesn't fully work out for me.
     Because in that scenario it seems a little weird to relate the price to another currency;
-    Especially with the current situation where exuberant money printing is debasing every other currency, this feels like measuring with a rubber band.
+    especially with the current situation where exuberant money printing is debasing every other currency, this feels like measuring with a rubber band.
 
     If one reads *monetary wealth* as an example of *purchasing power*, I think he was right onto it:
     It makes you realize, that bitcoin would be [Everything there is, divided by 21 million](https://www.youtube.com/watch?v=2pDlaOGA2ac).
+
+4. While we are at the topic of price:
+    The first known transaction, which traded bitcoin for fiat currency was [made by Martti Malmi](https://twitter.com/marttimalmi/status/423455561703624704).
+    He sold 5,050 BTC for $5,02 on October 12th, 2009.
+    From todays perspective – with 1 BTC being priced at ~$19k – these 5050 BTC are worth almost one hundred million US Dollar.
+    Yes, that's a 1 and many 0s.
+
+    Another now famous transaction was done by Laszlo Hanyecz on May 18th 2010:
+    It was the first purchase of a real-world good with bitcoin, sparked by [Laszlo desiring something tasty](https://bitcointalk.org/index.php?topic=137.0) to eat…
+
+    > I'll pay 10,000 bitcoins for a couple of pizzas.. like maybe 2 large ones so I have some left over for the next day.
+    > I like having left over pizza to nibble on later.
+    > You can make the pizza yourself and bring it to my house or order it for me from a delivery place,
+    > but what I'm aiming for is getting food delivered in exchange for bitcoins where I don't have to order or prepare it myself, […]
+
+    According to the calculation above, that’s now a 2 and many 0s.
+    Though this can be seen as a very expensive purchase in retrospective, boths sides of the deal were very happy with the trade back then.
+    And for the community, the ["Bitcoin Pizza Day"](https://happybitcoinpizzaday.com/) is a very important milestone, that we celebrate with a delicious feast. 🍕
+
+5. Now that we know that bitcoins can be worth a lot:
+   Did you also know that the subsidy of the first Bitcoin block is [not spendable](https://github.com/bitcoin/bitcoin/blob/b549cb1bd2cc4c6d7daeccdd06915bec590e90ca/src/validation.cpp#L1960)?
+    The so called [Genesis block](https://en.bitcoin.it/wiki/Genesis_block) is hardcoded into the software.
+    As it has no connection to a previous block, validating the [coinbase transaction](https://en.bitcoin.it/wiki/Coinbase) would fail.
+    This is most likely the reason it gets deliberately skipped and hence also is not included in the UTXO set.
+
+    Damn, that makes bitcoin even more scarce. 😉
 
 </div>
 
