@@ -19,6 +19,20 @@ The stories have no particular order and are just a reflection of mine from what
 There are so many exciting tidbits and meaningful insights hidden in the early history of Bitcoin.
 I hope you enjoy these as much as I do …
 
+<script>
+  const now = new Date()
+  const y = now.getFullYear()
+  const m = now.getMonth()
+  if (y == 2020 && m <= 11) {
+    const d = now.getDay()
+    const css = `.advent-calendar ol > li:nth-child(n+${d}) { display: none; } `
+    const style = document.createElement('style')
+    style.type = 'text/css'
+    style.appendChild(document.createTextNode(css))
+    document.head.appendChild(style)
+  }
+</script>
+
 <div class="advent-calendar">
 
 1. It's a common misconception that Bitcoin is the first "cryptocurrency". There have been multiple attempts before, but all of them involved trade-offs that prevented them from becoming wide-spread solutions:
