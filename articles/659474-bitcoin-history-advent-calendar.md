@@ -50,4 +50,23 @@ I hope you enjoy these as much as I do …
 
     Twelve years later, in the midst of the Corona pandemic and the central bank reactions it entails, this becomes obvious to an ever growing number of people.
     Today, I'm truely thankful for Satoshi and all the cypherpunks like Hal, that have started to work on alternatives at just the right time.
+
+3. Speaking of Hal – he was also the first one to ponder [the question of valuation](https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/2/#015004):
+
+    > As an amusing thought experiment, imagine that Bitcoin is successful and becomes the dominant payment system in use throughout the world.
+    > Then the total value of the currency should be equal to the total value of all the wealth in the world.
+    > Current estimates of total worldwide household wealth that I have found range from $100 trillion to $300 trillion.
+    > With 20 million coins, that gives each coin a value of about $10 million.
+
+    Reading this at face value, this experiment doesn't fully work out for me.
+    Because in that scenario it seems a little weird to relate the price to another currency;
+    Especially with the current situation where exuberant money printing is debasing every other currency, this feels like measuring with a rubber band.
+
+    If one reads the "monetary wealth" as an example of "purchasing power", I think he was right onto it:
+    It makes you realize, that bitcoin would be [Everything there is, divided by 21 million](https://www.youtube.com/watch?v=2pDlaOGA2ac).
+
 </div>
+
+If you like digging into Bitcoin history as much as I do, you will also enjoy the books
+[Digital Gold](https://www.amazon.com/Digital-Gold-Untold-Story-Bitcoin/dp/0241180996/ref=as_li_ss_tl?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&qid=1606989130&sr=8-3&linkCode=ll1&tag=innovatedde-21&linkId=7f9b5a88c14b3e7653de934585d38c79) and
+[The Book Of Satoshi](https://www.amazon.com/Book-Satoshi-Collected-Writings-Nakamoto/dp/0996061312/ref=as_li_ss_tl?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&qid=1606989372&sr=8-1&linkCode=ll1&tag=innovatedde-21&linkId=c7cafc40f4ee2125d61bcdeb459128cb), which I can highly recommend.
