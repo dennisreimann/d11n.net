@@ -21,16 +21,16 @@ I hope you enjoy these as much as I do …
 
 <div class="advent-calendar">
 
-1. It's a common misconception that Bitcoin is the first "cryptocurrency". There have been multiple attempts before, but all of them involved trade-offs that prevented them from becoming a wide-spread solutions:
+1. It's a common misconception that Bitcoin is the first "cryptocurrency". There have been multiple attempts before, but all of them involved trade-offs that prevented them from becoming wide-spread solutions:
 
     - David Chaum worked on [DigiCash](https://www.chaum.com/ecash/), which relied on a central organization as a trusted third-party.
     - Adam Back came up with [hashcash](http://www.hashcash.org/), which brought up the basic proof-of-work idea.
       Though each unit could only be spent once, it lacked the absolute scarcity aspect.
     - Nick Szabo conceptualized Bit Gold, which lead to the famous [Shelling Out](https://nakamotoinstitute.org/shelling-out/) article.
-      Yet, it could not fully solved the problem of double-spending, because it remained [vulnerable to Sybil attacks](http://unenumerated.blogspot.com/2009/05/liar-resistant-government.html).
+      Yet, it could not fully solve the problem of double-spending, because it remained [vulnerable to Sybil attacks](http://unenumerated.blogspot.com/2009/05/liar-resistant-government.html).
     - Wei Dai proposed [b-money](https://nakamotoinstitute.org/b-money/). It didn't reliable solve the problem of money creation.
     - Hal Finney's [RPOW](https://nakamotoinstitute.org/finney/rpow/index.html) (reusable proofs of work) expanded on Adam Back's hashcash ideas,
-      which never left the experimental proof of concept stage.
+      but never left the experimental proof of concept stage.
 
     As they've seen numerous attempts before, most members of the Cryptography Mailing List received the announcement of Bitcoin rather critically.
     E.g. John Levine addressed the potential computing power attack vector known as the "51% attack" and [wrote](https://satoshi.nakamotoinstitute.org/emails/cryptography/threads/1/#014817):
@@ -62,7 +62,7 @@ I hope you enjoy these as much as I do …
     Because in that scenario it seems a little weird to relate the price to another currency;
     Especially with the current situation where exuberant money printing is debasing every other currency, this feels like measuring with a rubber band.
 
-    If one reads the "monetary wealth" as an example of "purchasing power", I think he was right onto it:
+    If one reads *monetary wealth* as an example of *purchasing power*, I think he was right onto it:
     It makes you realize, that bitcoin would be [Everything there is, divided by 21 million](https://www.youtube.com/watch?v=2pDlaOGA2ac).
 
 </div>
