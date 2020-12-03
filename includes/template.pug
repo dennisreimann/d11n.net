@@ -4,6 +4,7 @@
 block vars
 
 - const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle
+- const cardImage = article && article.teaser || '/images/card.png'
 
 <!DOCTYPE html>
 html(lang="en")
@@ -20,7 +21,7 @@ html(lang="en")
     meta(property="twitter:card" content="summary")
     meta(property="twitter:title" content=pageTitle)
     meta(property="twitter:description" content=description)
-    meta(property="twitter:image" content="https://d11n.net/images/card.png")
+    meta(property="twitter:image" content=`https://d11n.net${cardImage}`)
     link(rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png")
     link(rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png")
