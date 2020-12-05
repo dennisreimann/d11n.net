@@ -219,9 +219,9 @@
 
       &:nth-child(odd) {
         border-left: 2px dashed var(--border-color);
-        border-top-left-radius: var(--space-l);
-        border-bottom-left-radius: var(--space-l);
-        margin-right: var(--space-l);
+        border-top-left-radius: var(--space-m);
+        border-bottom-left-radius: var(--space-m);
+        margin-right: var(--space-m);
         padding-right: 0;
 
         &:before {
@@ -232,9 +232,9 @@
 
       &:nth-child(even) {
         border-right: 2px dashed var(--border-color);
-        border-top-right-radius: var(--space-l);
-        border-bottom-right-radius: var(--space-l);
-        margin-left: var(--space-l);
+        border-top-right-radius: var(--space-m);
+        border-bottom-right-radius: var(--space-m);
+        margin-left: var(--space-m);
         padding-left: 0;
 
         &:before {

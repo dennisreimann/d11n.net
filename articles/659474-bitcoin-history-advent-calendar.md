@@ -23,9 +23,9 @@ I hope you enjoy these as much as I do …
   const now = new Date()
   const y = now.getFullYear()
   const m = now.getMonth()
-  if (y == 2020 && m <= 11) {
-    const d = now.getDay()
-    const css = `.advent-calendar ol > li:nth-child(n+${d}) { display: none; } `
+  if (y == 2020 && m <= 11 && location.host !== 'localhost:3000') {
+    const d = now.getDate()
+    const css = `.advent-calendar ol > li:nth-child(n+${d+1}) { display: none; } `
     const style = document.createElement('style')
     style.type = 'text/css'
     style.appendChild(document.createTextNode(css))
@@ -100,10 +100,58 @@ I hope you enjoy these as much as I do …
 5. Now that we know that bitcoins can be worth a lot:
    Did you also know that the subsidy of the first Bitcoin block is [not spendable](https://github.com/bitcoin/bitcoin/blob/b549cb1bd2cc4c6d7daeccdd06915bec590e90ca/src/validation.cpp#L1960)?
     The so called [Genesis block](https://en.bitcoin.it/wiki/Genesis_block) is hardcoded into the software.
-    As it has no connection to a previous block, validating the [coinbase transaction](https://en.bitcoin.it/wiki/Coinbase) would fail.
+    As it has no connection to a previous block, validating its [coinbase transaction](https://en.bitcoin.it/wiki/Coinbase) would fail.
     This is most likely the reason it gets deliberately skipped and hence also is not included in the UTXO set.
 
     Damn, that makes bitcoin even more scarce. 😉
+
+6. The [coinbase transaction](https://learnmeabitcoin.com/technical/coinbase-transaction) is a special part of each Bitcoin block:
+    It has a blank input (with no previous output) as it is the subsidy for the miner who found the block.
+    Miners can sign blocks they found with a blob of arbitrary data.
+    The Genesis block famously quotes a headline from 📰 The Times:
+
+    > The Times 03/Jan/2009 Chancellor on brink of second bailout for banks
+
+    Satoshi knew he was onto something here and must have chosen this signature carefully.
+    It is both an attestation of the date after which the block was mined and a stab at the economical principles, which Bitcoin opposes.
+
+7. The ideological mindset didn't just appeal to the early cypherpunks.
+    Martti Malmi approached Satoshi in May 2009, because he was intruiged by the potential to change the balance of power between governments and their citizens. 🗽
+
+    > A widespread adoption of such a system sounds like something that could have a devastating effect on the state’s ability to feed on its livestock.
+    > What do you think about this?
+    > I'm really excited about the thought of something practical that could truly bring us closer to freedom in our lifetime.
+
+    Satoshi approved of this and encouraged Martti to help him spread the word:
+
+    > Your understanding of Bitcoin is spot on
+
+    <div style="text-align:right">
+      <small class="note">
+        Source: Nathaniel Popper, <a href="https://www.amazon.com/Digital-Gold-Untold-Story-Bitcoin/dp/0241180996/ref=as_li_ss_tl?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&qid=1606989130&sr=8-3&linkCode=ll1&tag=innovatedde-21&linkId=7f9b5a88c14b3e7653de934585d38c79">Digital Gold</a>, page 30
+      </small>
+    </div>
+
+8. Martti Malmi entered the scene because of his political motivation and the revolutionary potential he saw in Bitcoin.
+    He helped Satoshi by working on the [early bitcoin.org website](https://web.archive.org/web/20100106082749/http://www.bitcoin.org/), which until then was solely focusing on the technical aspects of Bitcoin.
+    He articulated a list of advantages, this system has for regular users:
+
+    > - Transfer money easily through the internet, without having to trust third parties.<br>
+    > - Third parties can’t prevent or control your transactions.<br>
+    > - Be safe from the unstability caused by fractional reserve banking and bad policies of central banks. The limited inflation of the Bitcoin system’s money supply is distributed evenly (by CPU power) throughout the network, not monopolized by the banks.
+
+    Later he launched the [bitcointalk.org](https://bitcointalk.org/) forums, where users could discuss the technical, economical and political aspects of Bitcoin.
+    These forums and their discussions are a valuable archive for the early history of Bitcoin and they are also still very active today.
+
+9. Martti was also the one who came up with the idea of running Bitcoin automatically on computer startup.
+    Until then having a relevant number of nodes on the network was still a problem.
+    The [autostart feature got introduced in v0.2](https://satoshi.nakamotoinstitute.org/emails/bitcoin-list/29/) alongside with a few other contributions by Martti.
+
+    He was the first developer besides Satoshi and one could say, that Martti was also the first one, to improve Bitcoin from an UX perspective.
+    Later on, Martti [gradually withdrew from Bitcoin](https://forum.bitcoin.com/post169130.html) and the community:
+
+    > I found the atmosphere less inspiring and exciting than in the early days, when none of Bitcoin's potential had realized yet.
+    > On the other hand, by then Bitcoin already had lots of skilled coders who would keep it running, […]
 
 </div>
 
