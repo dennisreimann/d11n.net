@@ -153,6 +153,18 @@ I hope you enjoy these as much as I do …
     > I found the atmosphere less inspiring and exciting than in the early days, when none of Bitcoin's potential had realized yet.
     > On the other hand, by then Bitcoin already had lots of skilled coders who would keep it running, […]
 
+10. Speaking of firsts – [Hal Finney](https://web.archive.org/web/20140403012916/http://www.finney.org/~hal/) had a lot of those too: 🥇
+    - Hal was the first one besides Satoshi [running a bitcoin node](https://twitter.com/halfin/status/1110302988)
+    - He was the receiver of the first bitcoin transaction and got [10 BTC from Satoshi](https://www.blockstream.info/tx/f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16)
+    - Hal was the first employee at the PGP Corporation
+    - He was the creator of the first known [anonymous remailer](https://en.wikipedia.org/wiki/Anonymous_remailer#Cypherpunk_remailers.2C_also_called_Type_I)
+
+11. Those firsts list are fun, here's one about Bitcoin blocks: 1️⃣
+    - 170 was the first block containing a non-coinbase transaction – that's the one from above, where Satoshi sent Hal the 10 BTC.
+    - 481824 was the [first SegWit block](https://twitter.com/conio/status/900722226911219712) and contained the [first SegWit transaction](https://twitter.com/KHS9NE/status/900553902923362304)
+    - 481947 was mined by BitFury as the [first SegWit-block with more than 1 MB](https://twitter.com/sysmannet/status/900992234123911168?s=20)
+    - 505253 was the [first block with more than 2 MB of size](https://twitter.com/BitGo/status/954998877920247808)
+
 </div>
 
 If you like digging into Bitcoin history as much as I do, you will also enjoy the books
