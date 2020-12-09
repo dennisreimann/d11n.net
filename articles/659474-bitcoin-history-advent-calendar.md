@@ -23,7 +23,7 @@ I hope you enjoy these as much as I do …
   const now = new Date()
   const y = now.getFullYear()
   const m = now.getMonth()
-  if (y == 2020 && m <= 11 && location.host !== 'localhost:3000') {
+  if (y == 2020 && m <= 11 && !location.host.startsWith('localhost')) {
     const d = now.getDate()
     const css = `.advent-calendar ol > li:nth-child(n+${d+1}) { display: none; } `
     const style = document.createElement('style')
@@ -165,8 +165,58 @@ I hope you enjoy these as much as I do …
     - 481947 was mined by BitFury as the [first SegWit-block with more than 1 MB](https://twitter.com/sysmannet/status/900992234123911168?s=20)
     - 505253 was the [first block with more than 2 MB of size](https://twitter.com/BitGo/status/954998877920247808)
 
+12. In the early days, aquiring bitcoins wasn't easy:
+     As there were no exchanges, you either had to find someone to buy from or mine them.
+     To give people easy access, Gavin Andresen created a [faucet, that gave away 5 BTC](https://bitcointalk.org/index.php?topic=183.0) for free:
+
+     > Five ฿ per customer, first come first served, I've stocked it with ฿1,100 to start.  I'll add more once I'm sure it is working properly.<br>
+     > Why?  Because I want the Bitcoin project to succeed, and I think it is more likely to be a success if people can get a handful of coins to try it out.
+
+    The faucet was replenished with donations.
+    Between the launch date in June 2010 and its end in early 2011 [it gave away 19,715 BTC](https://news.bitcoin.com/bitcoin-history-part-3-turning-on-the-faucet/). 🚰
+
+     You can take a look at the [faucet website on the Internet Archive](https://web.archive.org/web/20100703032414/https://freebitcoins.appspot.com/).
+     Unfortunately, the opportunity to withdraw doesn't exist anymore. 😉
+
+13. The first media appearance that brought Bitcoin to the attention of the mainstream was an [article on Slashdot](https://news.slashdot.org/story/10/07/11/1747245/bitcoin-releases-version-03).
+     It was associated with the release of Bitcoin v0.3 and also featured the ideological and economical aspects:
+
+     > How's this for a disruptive technology?
+     > Bitcoin is a peer-to-peer, network-based digital currency with no central bank, and no transaction fees.
+     > Using a proof-of-work concept, nodes burn CPU cycles searching for bundles of coins, broadcasting their findings to the network.
+     > Analysis of energy usage indicates that the market value of Bitcoins is already above the value of the energy needed to generate them, indicating healthy demand.
+     > The community is hopeful the currency will remain outside the reach of any government.
+
+     It appeared on July 11, 2010 and brought the attention the community had hoped for.
+     A [surge of new users](https://en.bitcoinwiki.org/wiki/Bitcoin_history#Bitcoin_in_2010) quickly lead to an increase in mining difficulty by 300% the week after the article.
+     The exchange rate increased 10 times in ten days, from 0.008 USD per BTC to 0.08 USD per BTC.
+     As one can imagine, Gavin Andresen's faucet also ran dry quickly.
+
+14. All along its way, Bitcoin raised the attention of critics. 🧐
+    At the time of writing this, it has been [reported as dead almost 400 times](https://99bitcoins.com/bitcoin-obituaries/).
+    The first obituary appeared on [The Underground Economist blog](https://web.archive.org/web/20181005185752/https://undergroundeconomist.com/post/1528511369) on December 15th, 2010.
+    It argues against bitcoin as a currency, because of its deflationary aspect:
+
+    > Negative feedback loops like this are basically homeostasis.
+    > In nature, positive feedback loops like exist with Bitcoin are lethal;
+    > the only thing that’s even kept Bitcoin alive this long is its novelty.
+    > Either it will remain a novelty forever or it will transition from novelty status to dead faster than you can blink.
+
+    The first mainstream obituary was written on June 20, 2011 by [Forbes](https://www.forbes.com/sites/timworstall/2011/06/20/so-thats-the-end-of-bitcoin-then/?sh=72fca2d85d71), just after the biggest shock until then – the Mt Gox hack:
+
+    > No, ~~the~~ [sic] this doesn't necessarily mean the end of the Bitcoin experiment, but it's a pretty good indication of it.
+    > For there are certain things that we want from a currency.
+    > A medium of exchange, a store of value, we'd also like to it be liquid and security is important as well.
+    > No currency can have all of these features […] to perfection but a currency which doesn't have any of them in appreciable quantities isn't going to last very long. […]
+    > <br>
+    > It's difficult to see what the currency has going for it.
+
+    Mainstream media still doesn't seem to have learned much.
+    But that'll surely give us more rash obituaries to look forward to … 🪦
+
 </div>
 
 If you like digging into Bitcoin history as much as I do, you will also enjoy the books
 [Digital Gold](https://www.amazon.com/Digital-Gold-Untold-Story-Bitcoin/dp/0241180996/ref=as_li_ss_tl?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&qid=1606989130&sr=8-3&linkCode=ll1&tag=innovatedde-21&linkId=7f9b5a88c14b3e7653de934585d38c79) and
 [The Book Of Satoshi](https://www.amazon.com/Book-Satoshi-Collected-Writings-Nakamoto/dp/0996061312/ref=as_li_ss_tl?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&qid=1606989372&sr=8-1&linkCode=ll1&tag=innovatedde-21&linkId=c7cafc40f4ee2125d61bcdeb459128cb), which I can highly recommend.
+Other than that, the [Satoshi Nakamoto Institute](https://nakamotoinstitute.org/) is a great resource with lots of articles and an archive of the emails.
