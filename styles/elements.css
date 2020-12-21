@@ -160,12 +160,13 @@ section {
   margin-bottom: var(--space-xxl);
 }
 
-p {
+p,
+blockquote {
   margin-bottom: var(--space-l);
 }
 
 ul,
-ol{
+ol {
   margin-bottom: var(--space-l);
 
   & li + li {
@@ -227,6 +228,10 @@ blockquote {
     left: .05em;
     font-size: 3em;
     color: var(--color-neutral-50);
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
   }
 }
 
