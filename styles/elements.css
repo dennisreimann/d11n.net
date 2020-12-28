@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
     transition-duration: var(--transition-duration-fast);
   }
 
+  & span {
+    font-style: normal;
+  }
+
   @media (--L_and_up) {
     &:hover,
     &:focus {
