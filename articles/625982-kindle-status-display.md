@@ -32,7 +32,7 @@ The Kindle fetches this image and displays it in an interval of five minutes.
 You can tune this to fit your needs, but even with the short interval of updates the Kindles' battery lasts some days.
 This makes it a perfect fit to put it in your living room and raise your families awareness about Bitcoin. 😀
 
-The project [gathered a lot of interest on Twitter](https://twitter.com/DennisReimann/status/1249955251681202176)
+The project [gathered a lot of interest on Twitter](https://twitter.com/_d11n_/status/1249955251681202176)
 and since [Gigi](https://twitter.com/dergigi) also published his [Bitcoin Quotes](https://bitcoin-quotes.com)
 project today I spontaneously [integrated the API he added](https://twitter.com/dergigi/status/1250060070039289860)
 upon the request for it.

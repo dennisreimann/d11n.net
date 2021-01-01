@@ -17,7 +17,7 @@ Motivation increased rapidly and there are lots of projects to cover in this rev
 
 ## M5StackSats
 
-I [updated the BTCPay Server integration](https://twitter.com/DennisReimann/status/1279867664094171138) of the M5StackSats:
+I [updated the BTCPay Server integration](https://twitter.com/_d11n_/status/1279867664094171138) of the M5StackSats:
 There was an issue with the QR code generation, which lead me to pick up the project again.
 The UI and user flow got some improvements and I also added proper error handling in case of network errors.
 
@@ -53,7 +53,7 @@ Overall the design system already paid off, as it makes it so much easier to kee
 
 ## UIengine overhaul
 
-Speaking of UI rebrushes: The [UIengine](https://uiengine.uix.space/) received a [major UI overhaul](https://twitter.com/DennisReimann/status/1282297120251355136) too.
+Speaking of UI rebrushes: The [UIengine](https://uiengine.uix.space/) received a [major UI overhaul](https://twitter.com/_d11n_/status/1282297120251355136) too.
 Thanks to [Cos Anca](https://twitter.com/cos_anca) the interface looks clean, fresh and sexy.
 He not only rebrushed the interface, but also added some new token representations:
 `opacity`, `box-shadow` and `border` styles can now also be properly displayed.

@@ -25,7 +25,7 @@ I found the idea of building a PoS terminal based on cheap hardware very intrigu
 Astonishingly, there was no BTCPay Server integration for the M5StackSats project, yet.
 So I decided to build it as a way of learning a bit more about the new gadget.
 
-It took me a bit of tinkering and familiarizing myself with Arduino and writing C, but [it finally worked out](https://twitter.com/DennisReimann/status/1205998709592526848).
+It took me a bit of tinkering and familiarizing myself with Arduino and writing C, but [it finally worked out](https://twitter.com/_d11n_/status/1205998709592526848).
 Here's a short demo of the [BTCPayServer integration for the M5StackSats](https://github.com/arcbtc/M5StackSats/tree/master/M5StackSatsOther/M5StackSatsBTCPAY) …
 
 <div class="ytEmbed">

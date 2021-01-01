@@ -27,13 +27,13 @@ Setting everything up I immediately [fell in love](https://twitter.com/_einundzw
 It's not just a nice and easy way to get your own full node up and running, but also a platform to extend and hack on.
 
 That lead me to adding my [stacking-sats-kraken](https://github.com/dennisreimann/stacking-sats-kraken) script and [kindle-display](https://github.com/dennisreimann/kindle-display) server as bonus scripts to the Raspiblitz.
-I asked for [help reviewing](https://twitter.com/DennisReimann/status/1277898277040672768) those and seeing people quickly [spinning up](https://twitter.com/emzy/status/1278015347770228737) [their own instances](https://twitter.com/grnqrtr/status/1283995575088582657) and providing feedback was a really gratifying experience.
+I asked for [help reviewing](https://twitter.com/_d11n_/status/1277898277040672768) those and seeing people quickly [spinning up](https://twitter.com/emzy/status/1278015347770228737) [their own instances](https://twitter.com/grnqrtr/status/1283995575088582657) and providing feedback was a really gratifying experience.
 The kindle-display project also received some PRs since then and we could refine it to a nice and simple version I think.
 
 ![Github Summary for June 2020](/images/open-source-reports/github-summary-2020-06.png)
 
 Other than that I've been more involved with podcasting again:
-I also [printed some stickers](https://twitter.com/DennisReimann/status/1276443243694239745) and have ideas for more.
+I also [printed some stickers](https://twitter.com/_d11n_/status/1276443243694239745) and have ideas for more.
 Maybe I'll come up with a sticker pack that I can set up a small shop for.
 
 I'll definitely be coding more next month, so stay tuned for a longer report next time. 😀

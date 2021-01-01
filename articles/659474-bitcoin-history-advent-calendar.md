@@ -224,7 +224,7 @@ I hope you enjoy these as much as I do …
 22. In a similar vein, the Satoshi Nakamoto Intitute collects a list of [The Skeptics](https://nakamotoinstitute.org/the-skeptics/). 🤨
 
     One of the most vocal sceptics until today is Peter Schiff.
-    As a typical gold bug, he falls for the ["intrinsic value" argument](https://twitter.com/DennisReimann/status/1255800924938911746) and I think he will [stick with this](https://twitter.com/PeterSchiff/status/1256634494741856257) forever …
+    As a typical gold bug, he falls for the ["intrinsic value" argument](https://twitter.com/_d11n_/status/1255800924938911746) and I think he will [stick with this](https://twitter.com/PeterSchiff/status/1256634494741856257) forever …
 
     > What [bitcoins] lack is their own fundamental intrinsic value.
     > You can’t do anything with a bitcoin, other than trade it for something you want.

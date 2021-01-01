@@ -11,7 +11,7 @@ description: |
 ---
 # My 1st Month of working on Open Source full-time
 
-It's the first month in on [my full-time open source journey](https://twitter.com/DennisReimann/status/1212025650363666439) and I'm loving it. 🎉
+It's the first month in on [my full-time open source journey](https://twitter.com/_d11n_/status/1212025650363666439) and I'm loving it. 🎉
 
 It was [Kukks](https://twitter.com/MrKukks) whose story and courage was a huge inspiration for doing the same:
 Stopping regular freelance client-work and going full-time open source in the Bitcoin space.
@@ -32,10 +32,10 @@ Fortunately the GitHub contribution activity offers a very good summary of what 
 
 As you can see most of my time was spent on BTCPay Server related projects:
 We had our [biggest release ever](https://blog.btcpayserver.org/btcpay-server-1-0-4-0/), with the highlight of PayJoin functionality that Kukks and Nicolas worked on.
-My contributions were mainly on implementing the new default theme, which now also features the long awaited [dark mode](https://twitter.com/DennisReimann/status/1246860991700271105).
+My contributions were mainly on implementing the new default theme, which now also features the long awaited [dark mode](https://twitter.com/_d11n_/status/1246860991700271105).
 This builds on the UI refactorings I did for the BTCPay Casa theme last year.
 
-I finished up some remaining tasks and released [UIengine v3.0](https://twitter.com/DennisReimann/status/1253626894752382981). 🎉
+I finished up some remaining tasks and released [UIengine v3.0](https://twitter.com/_d11n_/status/1253626894752382981). 🎉
 <br>
 The [UIengine](https://uiengine.uix.space) isn't directly Bitcoin related, but we are using it to build the [BTCPay Server Design System](https://design.btcpayserver.org/) I also initiated this month.
 It is the codified version of the BTCPay Server design guidelines.
