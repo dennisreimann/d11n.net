@@ -5,6 +5,7 @@ block vars
 
 - const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle
 - const cardImage = article && article.teaser || '/images/card.png'
+- const cardType = article && article.teaser ? `summary_large_image` : 'summary'
 
 <!DOCTYPE html>
 html(lang="en")
@@ -18,7 +19,7 @@ html(lang="en")
     meta(name="msapplication-TileColor" content=themeColor)
     meta(name="msapplication-config" content="/browserconfig.xml")
     meta(property="twitter:creator" content="@dennisreimann")
-    meta(property="twitter:card" content="summary")
+    meta(property="twitter:card" content=cardType)
     meta(property="twitter:title" content=pageTitle)
     meta(property="twitter:description" content=description)
     meta(property="twitter:image" content=`https://d11n.net${cardImage}`)
