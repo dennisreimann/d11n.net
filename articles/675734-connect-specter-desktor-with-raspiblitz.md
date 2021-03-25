@@ -40,7 +40,7 @@ Connect to your RaspiBlitz via SSH and exit the main menu via the last option `C
 Edit the bitcoind config so that the RPC interface allows connections from your local network:
 
 ```bash
-sudo nano .bitcoin/bitcoin.conf
+sudo nano /mnt/hdd/bitcoin/bitcoin.conf
 ```
 
 Add and update these options in the connection settings part:
@@ -80,7 +80,7 @@ The last thing on the RaspiBlitz is to get the username and password for the RPC
 We need the credentials in the next step to configure the Specter Desktop app:
 
 ```bash
-cat .bitcoin/bitcoin.conf | grep -E "rpc(user|password)"
+cat /mnt/hdd/bitcoin/bitcoin.conf | grep -E "rpc(user|password)"
 ```
 
 ## In the Specter Desktop App
