@@ -16,6 +16,16 @@ teaser: /images/specter-desktop-raspiblitz/card.png
 
 This is a walk-through on how to use the [Specter Desktop App](https://github.com/cryptoadvance/specter-desktop/releases) on your computer with your RaspiBlitz full node.
 If you are using the Specter Desktop web interface on your RaspiBlitz, you do not need to follow these steps.
+
+## Update for RaspiBlitz v1.7
+
+With v1.7 the RaspiBlitz now features everything described below in the "Connect" menu.
+So if you are using this or a higher version, there is no need anymore to follow this tutorial.
+
+![RaspiBlitz Connect menu](/images/specter-desktop-raspiblitz/connect-menu.png)
+
+## For RaspiBlitz versions lower than v1.7
+
 For this case the Specter Desktop integration on the RaspiBlitz is already preconfigured.
 Versions used in this tutorial:
 
