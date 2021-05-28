@@ -30,7 +30,7 @@
     "prod": "npm-run-all build optimize sitemap"
   },
   "devDependencies": {
-    "autoprefixer": "10.2.5",
+    "autoprefixer": "10.2.6",
     "browser-sync": "2.26.14",
     "csso-cli": "3.0.0",
     "glob": "7.1.7",
@@ -43,7 +43,7 @@
     "markdown-it-mark": "3.0.1",
     "npm-run-all": "4.1.5",
     "onchange": "7.1.0",
-    "postcss": "8.2.15",
+    "postcss": "8.3.0",
     "postcss-calc": "8.0.0",
     "postcss-cli": "8.3.1",
     "postcss-custom-media": "8.0.0",
