@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>d11n</title>
+
+    <link href="https://pay.d11n.net/bundles/checkout-bundle.min.css?v=jZN-4LdLgF9CC8FnZMGm2FYrMJCSDCtoRAelWIyYWFE" rel="stylesheet">
+
+
+    <script type="text/javascript">
+        var initialSrvModel = {"uiSettings":{"extensionPartial":"Lightning/LightningLikeMethodCheckout","checkoutBodyVueComponentName":"LightningLikeMethodCheckout","checkoutHeaderVueComponentName":"LightningLikeMethodCheckoutHeader","noScriptPartialName":"Lightning/LightningLikeMethodCheckoutNoScript"},"customCSSLink":"/styles/checkout.css","customLogoLink":"/images/logo.svg","htmlTitle":"d11n","defaultLang":"en","availableCryptos":[{"paymentMethodId":"BTC_LightningLike","cryptoImage":"https://pay.d11n.net/imlegacy/bitcoin-lightning.svg","link":"/i/82D6MQWvbLuAYipCqcPuc4/BTC_LightningLike","paymentMethodName":"Bitcoin (Lightning)","isLightning":true,"cryptoCode":"BTC"}],"isModal":false,"cryptoCode":"Sats","invoiceId":"82D6MQWvbLuAYipCqcPuc4","btcAddress":"lnbc210n1p0ujs9dpp5w3yum73f434qjz7dreku87jwgs5jgr94vhes4hc759dx3dzkn3hsdqcg3hkuct5v4jzqar0ypjrzvtwcqzpgxqrrsssp56lf23ayyy9hhyh2mkpxs4g8sk3qd592s2qh7zsdfyam22hewqsxq9qy9qsqtzqkdngu0dgsqglc5tn073ghw0s5ugeafjljxjpn4ysftwlazsczzctg845zkvkdrr6feeg3mqddpep89wewjt07t2rm5hhxpe9chwqpqw9rea","btcDue":"21","customerEmail":null,"requiresRefundEmail":false,"showRecommendedFee":false,"feeRate":0.0,"expirationSeconds":3593,"status":"new","merchantRefLink":"/thankyou.html","maxTimeSeconds":3600,"storeName":"d11n Donations","itemDesc":null,"timeLeft":"59:53","rate":"1 Sats","orderAmount":"21","orderAmountFiat":"21 Sats","invoiceBitcoinUrl":"lightning:lnbc210n1p0ujs9dpp5w3yum73f434qjz7dreku87jwgs5jgr94vhes4hc759dx3dzkn3hsdqcg3hkuct5v4jzqar0ypjrzvtwcqzpgxqrrsssp56lf23ayyy9hhyh2mkpxs4g8sk3qd592s2qh7zsdfyam22hewqsxq9qy9qsqtzqkdngu0dgsqglc5tn073ghw0s5ugeafjljxjpn4ysftwlazsczzctg845zkvkdrr6feeg3mqddpep89wewjt07t2rm5hhxpe9chwqpqw9rea","invoiceBitcoinUrlQR":"lightning:LNBC210N1P0UJS9DPP5W3YUM73F434QJZ7DREKU87JWGS5JGR94VHES4HC759DX3DZKN3HSDQCG3HKUCT5V4JZQAR0YPJRZVTWCQZPGXQRRSSSP56LF23AYYY9HHYH2MKPXS4G8SK3QD592S2QH7ZSDFYAM22HEWQSXQ9QY9QSQTZQKDNGU0DGSQGLC5TN073GHW0S5UGEAFJLJXJPN4YSFTWLAZSCZZCTG845ZKVKDRR6FEEG3MQDDPEP89WEWJT07T2RM5HHXPE9CHWQPQW9REA","txCount":1,"btcPaid":"0","storeEmail":null,"orderId":null,"networkFee":0.0,"isMultiCurrency":false,"maxTimeMinutes":60,"paymentType":null,"paymentMethodId":"BTC_LightningLike","paymentMethodName":"Bitcoin (Lightning)","cryptoImage":"https://pay.d11n.net/imlegacy/bitcoin-lightning.svg","storeId":"7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT","peerInfo":"0364b672df6939e97f63b25c97c12ac59a77a7d1b14383c6a479e1da1e6d29f4c4@zxuygf2bxyvlb5bw3f64rx7g4t7mpa2e5tuqa5mpnaa6bnvkg76xzxad.onion:9735","coinSwitchEnabled":false,"coinSwitchMode":null,"coinSwitchMerchantId":null,"rootPath":"/","coinSwitchAmountMarkupPercentage":0.0,"redirectAutomatically":true,"invoiceCurrency":"SATS"};
+    </script>
+
+    <script src="https://pay.d11n.net/bundles/checkout-bundle.min.js?v=lqC_NbbDYVyXX4a_BNkXltQGyIg5kUM0ZIMOECMwQPg" type="text/javascript"></script>
+
+    <script>vex.defaultOptions.className = 'vex-theme-btcpay'</script>
+
+        <link href="/styles/checkout.css" rel="stylesheet">
+
+</head>
+<body>
+    <noscript>
+        <div style="padding:2em;text-align:center;">
+            <h2>Javascript is currently disabled in your browser.</h2>
+            <h5>Please enable Javascript and refresh this page for the best experience.</h5>
+
+            <p>Alternatively, click below to continue to our HTML-only invoice.</p>
+
+            <a style="text-decoration:underline;color:blue" href="/invoice-noscript?invoiceId=82D6MQWvbLuAYipCqcPuc4">
+                Continue to javascript-disabled invoice &gt;
+            </a>
+        </div>
+    </noscript>
+
+    <!--[if lte IE 8]>
+    <div style="padding:2em;text-align:center;">
+      <form asp-action="CheckoutNoScript" method="GET">
+        <button style="text-decoration: underline; color: blue">Continue to legacy browser compatible invoice page
+        </button>
+      </form>
+    </div>
+    <![endif]-->
+
+    <invoice style="">
+        <div id="checkoutCtrl" class="no-bounce"><div class="modal page"><div role="document" class="modal-dialog open opened"><div class="modal-content long"><div class="content"><div class="invoice"><div class="top-header"><div class="header"><div class="header__icon"><img src="/images/logo.svg" class="header__icon__img" height="40"></div> <div class="close-icon close-action">
+            ✖
+        </div></div> <div class="timer-row"><div class="timer-row__progress-bar" style="width: 20.1552%;"></div> <div class="timer-row__spinner"><bp-spinner><svg xml:space="preserve" version="1.1" viewBox="0 0 50 50" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M11.1,29.6c-0.5-1.5-0.8-3-0.8-4.6c0-8.1,6.6-14.7,14.7-14.7S39.7,16.9,39.7,25c0,1.6-0.3,3.2-0.8,4.6l6.1,2c0.7-2.1,1.1-4.3,1.1-6.6c0-11.7-9.5-21.2-21.2-21.2S3.8,13.3,3.8,25c0,2.3,0.4,4.5,1.1,6.6L11.1,29.6z"></path></svg></bp-spinner></div> <div class="timer-row__message"><span>
+                Awaiting Payment...
+            </span></div> <div class="timer-row__time-left">47:54</div></div></div> <div class="order-details"><div class="currency-selection"><div class="single-item-order__left"><div id="pay-with-text" style="font-weight: 600;">
+                Pay with
+            </div></div> <div class="single-item-order__right"><div class="payment__currencies_noborder"><img src="https://pay.d11n.net/imlegacy/bitcoin-lightning.svg"> <span>Bitcoin (Lightning) (Sats)</span> <span style="display: none;">⚡</span></div> <div class="payment__spinner" style="display: none;"><bp-spinner><svg xml:space="preserve" version="1.1" viewBox="0 0 50 50" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M11.1,29.6c-0.5-1.5-0.8-3-0.8-4.6c0-8.1,6.6-14.7,14.7-14.7S39.7,16.9,39.7,25c0,1.6-0.3,3.2-0.8,4.6l6.1,2c0.7-2.1,1.1-4.3,1.1-6.6c0-11.7-9.5-21.2-21.2-21.2S3.8,13.3,3.8,25c0,2.3,0.4,4.5,1.1,6.6L11.1,29.6z"></path></svg></bp-spinner></div></div></div> <div class="single-item-order buyerTotalLine expanded"><div class="single-item-order__left"><div class="single-item-order__left__name">
+                d11n Donations
+            </div> <div class="single-item-order__left__description">
+
+            </div></div> <div class="single-item-order__right"><div class="single-item-order__right__btc-price"><span>21 Sats</span></div> <div class="single-item-order__right__ex-rate"><span>1 Sat = 1 Sats</span></div></div> <span class="fa fa-angle-double-down"></span> <span class="fa fa-angle-double-up"></span></div> <line-items style="display: block;"><!----> <div class="line-items expanded"><div class="line-items__item"><div class="line-items__item__label">Order Amount</div> <div class="line-items__item__value">21 Sats</div></div> <div class="line-items__item line-items_fiatvalue"><div class="line-items__item__label">&nbsp;</div> <div class="line-items__item__value single-item-order__right__ex-rate">
+                    21 Sats
+                </div></div> <div class="line-items__item" style="display: none;"><div class="line-items__item__label"><span>Network Cost</span></div> <div class="line-items__item__value"><span>
+                        1 transaction x 0 Sats
+                    </span></div></div> <div class="line-items__item"><div class="line-items__item__label"><span>Already Paid</span></div> <div class="line-items__item__value">-0 Sats</div></div> <div class="line-items__item line-items__item--total"><div class="line-items__item__label">Due</div> <div class="line-items__item__value">21 Sats</div></div></div></line-items> <div class="payment-tabs"><div id="scan-tab" class="payment-tabs__tab  active"><span>Scan</span></div> <div id="copy-tab" class="payment-tabs__tab"><span>Copy</span></div> <div id="tabsSlider" class="payment-tabs__slider slide-scan"></div></div></div> <div class="payment-box"><div id="emailAddressView" class="bp-view enter-contact-email"><form id="emailAddressForm" name="emailAddressForm" novalidate="novalidate" class="manual__step-one refund-address-form contact-email-form"><div class="manual__step-one__header"><span>Contact &amp; Refund Email</span></div> <div class="manual__step-one__instructions"><span class="initial-label"><span>Please provide an email address below. We’ll contact you at this address if there is an issue with your payment.</span></span> <span class="submission-error-label" style="display: none;">Please enter a valid email address</span></div> <div class="input-wrapper"><input id="emailAddressFormInput" placeholder="Your email" type="email" class="bp-input email-input  ng-pristine ng-submitted ng-touched"> <bp-loading-button><button type="submit" class="action-button" style="margin-top: 15px;"><span class="button-text">Continue</span> <div class="loader-wrapper"><bp-spinner><svg xml:space="preserve" version="1.1" viewBox="0 0 50 50" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M11.1,29.6c-0.5-1.5-0.8-3-0.8-4.6c0-8.1,6.6-14.7,14.7-14.7S39.7,16.9,39.7,25c0,1.6-0.3,3.2-0.8,4.6l6.1,2c0.7-2.1,1.1-4.3,1.1-6.6c0-11.7-9.5-21.2-21.2-21.2S3.8,13.3,3.8,25c0,2.3,0.4,4.5,1.1,6.6L11.1,29.6z"></path></svg></bp-spinner></div></button></bp-loading-button></div></form></div> <div><div><div id="scan" class="bp-view payment scan active"><div class="wrapBtnGroup"><div class="btnGroupLnd"><button title="BOLT 11 Invoice" class="">
+                            BOLT 11 Invoice
+                    </button> <button title="Node Info" class="active">
+                        Node Info
+                    </button></div></div> <div class="payment__scan"><img src="https://pay.d11n.net/imlegacy/bitcoin-lightning.svg" class="qr_currency_icon"> <svg><svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 51 51" shape-rendering="crispEdges"><path fill="#f5f5f7" d="M0 0h51v51H0z"></path><path stroke="#000000" d="M1 1.5h7m2 0h1m3 0h1m1 0h3m1 0h5m1 0h5m2 0h2m1 0h3m2 0h1m1 0h7M1 2.5h1m5 0h1m3 0h1m2 0h1m3 0h3m4 0h1m3 0h1m1 0h4m2 0h5m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m3 0h1m5 0h1m1 0h2m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m7 0h2m1 0h3m1 0h1m4 0h4m1 0h1m2 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h3m2 0h2m1 0h11m2 0h1m1 0h1m4 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h2m1 0h1m1 0h1m1 0h3m2 0h3m3 0h1m2 0h2m3 0h1m1 0h1m1 0h1m3 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h1m1 0h1m1 0h1m1 0h2m3 0h4m3 0h2m2 0h1m4 0h3m1 0h1M1 9.5h1m1 0h5m2 0h1m3 0h1m1 0h4m1 0h1m1 0h5m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h5M4 10.5h1m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m3 0h1m8 0h1m1 0h1m1 0h1m2 0h1m4 0h1m2 0h2m2 0h2M1 11.5h3m2 0h3m3 0h1m1 0h1m2 0h1m1 0h6m2 0h2m3 0h1m1 0h1m2 0h2m1 0h2m1 0h2m2 0h1m1 0h1M2 12.5h2m2 0h1m3 0h3m1 0h1m1 0h2m2 0h1m1 0h1m3 0h1m3 0h2m1 0h1m2 0h2m5 0h1m1 0h1m2 0h1M1 13.5h1m1 0h6m1 0h2m3 0h1m3 0h2m3 0h1m3 0h1m6 0h1m2 0h5m3 0h2m1 0h1M1 14.5h1m1 0h4m1 0h1m4 0h1m1 0h4m3 0h1m6 0h5m2 0h1m1 0h1m3 0h2m1 0h2m2 0h1M1 15.5h1m3 0h5m3 0h1m1 0h1m1 0h1m1 0h2m3 0h2m2 0h1m1 0h2m2 0h1m2 0h1m3 0h2m1 0h1m2 0h3M2 16.5h2m1 0h1m2 0h1m2 0h3m1 0h1m3 0h1m2 0h1m1 0h2m5 0h2m1 0h1m3 0h1m1 0h1m2 0h3M3 17.5h1m1 0h4m1 0h3m1 0h1m1 0h1m4 0h1m2 0h5m1 0h2m7 0h4m4 0h1m1 0h1M2 18.5h1m15 0h4m2 0h1m1 0h1m4 0h2m1 0h1m1 0h1m1 0h2m4 0h2m2 0h1M1 19.5h2m2 0h1m1 0h1m2 0h3m3 0h1m1 0h2m1 0h6m1 0h1m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h2M9 20.5h1m1 0h1m1 0h2m2 0h1m2 0h1m1 0h1m1 0h2m4 0h3m3 0h1m3 0h1m1 0h2m1 0h1M2 21.5h4m1 0h1m3 0h1m3 0h2m1 0h2m1 0h1m2 0h3m1 0h1m5 0h9m1 0h1m1 0h1m1 0h2M2 22.5h5m1 0h3m1 0h1m3 0h2m6 0h1m4 0h1m1 0h1m1 0h1m5 0h1m2 0h4m2 0h2M2 23.5h2m1 0h5m1 0h4m1 0h1m1 0h2m1 0h1m1 0h5m2 0h1m1 0h1m1 0h5m1 0h8M1 24.5h3m1 0h1m3 0h1m1 0h1m2 0h2m1 0h1m1 0h2m1 0h2m3 0h1m1 0h1m1 0h1m1 0h1m2 0h2m3 0h1m3 0h2m1 0h1M4 25.5h2m1 0h1m1 0h2m1 0h3m5 0h1m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h6m1 0h1m1 0h1m1 0h5M1 26.5h1m1 0h1m1 0h1m3 0h2m2 0h1m4 0h1m4 0h1m3 0h3m2 0h3m3 0h1m1 0h2m3 0h1m3 0h1M2 27.5h1m1 0h7m1 0h1m3 0h4m1 0h1m1 0h5m2 0h2m4 0h2m2 0h10M1 28.5h3m1 0h2m4 0h1m1 0h1m2 0h5m1 0h2m1 0h2m2 0h1m1 0h1m1 0h2m1 0h3m2 0h2m4 0h1M4 29.5h1m2 0h1m2 0h1m1 0h1m2 0h2m1 0h1m4 0h4m1 0h1m1 0h1m4 0h5m2 0h2m1 0h2m1 0h2M1 30.5h2m6 0h1m1 0h2m3 0h7m2 0h1m1 0h5m1 0h1m11 0h2m2 0h1M1 31.5h1m2 0h1m1 0h5m7 0h2m1 0h2m1 0h2m4 0h3m2 0h3m1 0h2m2 0h3m1 0h1m1 0h1M4 32.5h1m1 0h1m1 0h2m1 0h1m1 0h3m4 0h2m1 0h1m1 0h2m1 0h1m1 0h1m4 0h1m2 0h1m2 0h4m3 0h2M5 33.5h5m5 0h1m2 0h1m2 0h1m1 0h1m1 0h2m2 0h1m2 0h3m1 0h1m2 0h2m2 0h2m1 0h2m1 0h1M2 34.5h2m7 0h1m1 0h2m1 0h4m5 0h6m2 0h1m1 0h1m3 0h1m1 0h2m1 0h1m3 0h1M2 35.5h1m1 0h1m2 0h5m1 0h1m1 0h1m5 0h4m2 0h1m1 0h1m1 0h3m2 0h3m1 0h2m1 0h3m1 0h1M2 36.5h1m6 0h1m1 0h1m4 0h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h1m2 0h1m1 0h1m10 0h1M1 37.5h2m2 0h3m2 0h7m2 0h1m1 0h1m3 0h2m3 0h1m4 0h6m2 0h1m2 0h4M1 38.5h1m2 0h2m2 0h1m3 0h3m1 0h1m2 0h1m2 0h2m3 0h1m1 0h1m2 0h2m2 0h1m4 0h2m1 0h1m1 0h1m2 0h1M2 39.5h1m3 0h3m2 0h4m1 0h1m1 0h1m1 0h2m1 0h2m1 0h2m2 0h3m1 0h2m1 0h4m2 0h3m1 0h1M2 40.5h3m3 0h2m1 0h2m1 0h1m3 0h2m2 0h5m1 0h1m1 0h3m1 0h1m1 0h2m2 0h3m3 0h1m1 0h1M1 41.5h3m3 0h1m1 0h2m2 0h2m1 0h3m1 0h2m1 0h5m4 0h1m2 0h1m2 0h8m2 0h2M9 42.5h1m1 0h1m1 0h1m3 0h1m2 0h1m2 0h1m3 0h1m1 0h3m1 0h2m1 0h1m1 0h1m1 0h2m3 0h1m2 0h1M1 43.5h7m4 0h1m2 0h1m1 0h2m1 0h4m1 0h1m1 0h2m3 0h1m4 0h3m1 0h1m1 0h1m1 0h5M1 44.5h1m5 0h1m1 0h1m2 0h1m5 0h2m2 0h2m3 0h1m1 0h5m2 0h3m2 0h1m3 0h2m1 0h1M1 45.5h1m1 0h3m1 0h1m1 0h2m2 0h3m1 0h2m1 0h1m2 0h5m2 0h1m3 0h2m2 0h10m1 0h1M1 46.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1m3 0h3m1 0h2m1 0h5m1 0h2m2 0h2m2 0h1m1 0h1m3 0h1M1 47.5h1m1 0h3m1 0h1m1 0h1m3 0h3m1 0h1m2 0h1m1 0h1m2 0h1m1 0h2m2 0h1m5 0h1m4 0h1m4 0h1m1 0h1M1 48.5h1m5 0h1m2 0h2m1 0h1m1 0h1m3 0h1m3 0h1m2 0h2m3 0h1m4 0h1m1 0h1m1 0h2m1 0h1m1 0h5M1 49.5h7m1 0h1m1 0h1m1 0h2m3 0h2m1 0h1m2 0h2m2 0h1m1 0h2m4 0h1m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1"></path></svg>
+</svg> <div class="payment__spinner qr_currency_icon" style="padding-right: 20px;"><partial name="Checkout-Spinner"></partial></div></div> <div class="payment__details__instruction__open-wallet"><a target="_top" href="lightning:lnbc210n1p0ujs9dpp5w3yum73f434qjz7dreku87jwgs5jgr94vhes4hc759dx3dzkn3hsdqcg3hkuct5v4jzqar0ypjrzvtwcqzpgxqrrsssp56lf23ayyy9hhyh2mkpxs4g8sk3qd592s2qh7zsdfyam22hewqsxq9qy9qsqtzqkdngu0dgsqglc5tn073ghw0s5ugeafjljxjpn4ysftwlazsczzctg845zkvkdrr6feeg3mqddpep89wewjt07t2rm5hhxpe9chwqpqw9rea" class="payment__details__instruction__open-wallet__btn action-button"><span>Open in wallet</span></a></div></div> <div id="copy" class="bp-view payment manual-flow"><div class="manual__step-two__instructions"><span>To complete your payment, please send 21 Sats to the address below.</span></div> <div class="copyLabelPopup"><span>Copied</span></div> <nav class="copyBox"><div class="copySectionBox bottomBorder"><label>BOLT 11 Invoice</label> <div class="inputWithIcon _copyInput"><input type="text" readonly="readonly" class="checkoutTextbox"> <img src="https://pay.d11n.net/imlegacy/bitcoin-lightning.svg"></div></div> <div class="separatorGem"></div> <div class="copySectionBox"><label>Node Info</label> <div class="inputWithIcon _copyInput"><input type="text" readonly="readonly" class="checkoutTextbox"> <img src="https://pay.d11n.net/imlegacy/bitcoin-lightning.svg"></div></div></nav></div></div></div> <div id="paid" class="bp-view"><div class="status-block"><div class="success-block"><div class="status-icon"><div class="status-icon__wrapper"><div class="inner-wrapper"><div class="status-icon__wrapper__icon"><img src="https://pay.d11n.net/imlegacy/checkmark.svg?v=I5LHco7Ztucf7E1JiNtVbcBCdVLxVspjoi717TjT4j4"></div> <div class="status-icon__wrapper__outline"></div></div></div></div> <div class="success-message">This invoice has been paid</div> <a href="/thankyou.html" class="action-button"><span>Return to d11n Donations</span></a> <button class="action-button close-action" style="display: none;"><span>Close</span></button></div></div> <div id="refund-overpayment-button" class="button-wrapper refund-address-form-container"></div></div> <div id="expired" class="bp-view expired"><div><div class="expired__body" style="margin-bottom: 20px;"><div class="expired__header">What happened?</div> <div class="expired__text">This invoice has expired. An invoice is only valid for 60 minutes.
+You can return to d11n Donations if you would like to submit your payment again.</div> <div class="expired__text">
+                    If you tried to send a payment, it has not yet been accepted by the network. We have not yet received your funds.
+                </div> <div class="expired__text">
+                    If we receive it at a later point, we will either process your order or contact you to make refund arrangements...
+                </div> <div class="expired__text expired__text__smaller"><span class="expired__text__bullet">Invoice ID</span>:
+                    82D6MQWvbLuAYipCqcPuc4
+                    <br> <span class="expired__text__bullet">Order ID</span>:
+
+                </div></div> <a href="/thankyou.html" class="action-button"><span>Return to d11n Donations</span></a> <button class="action-button close-action" style="display: none;"><span>Close</span></button></div></div></div></div></div></div> <div style="margin-top: 10px; text-align: center;"><div id="prettydropdown-DefaultLang" class="prettydropdown arrow" style="width: 202px;"><ul tabindex="0" role="listbox" aria-activedescendant="item1607024821560-1" aria-expanded="false" style="max-height:30px;margin:0px 0px 0px 0px;" class=""><li id="item1607024821560-1" data-value="en" role="option" class="selected" style="height: 30px; line-height: 28px; width: 200px;">English<span aria-hidden="true" class="checked"> ✓</span></li><li id="item1607024821560-2" data-value="np-NP" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">नेपाली</li><li id="item1607024821560-3" data-value="kk-KZ" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Қазақша</li><li id="item1607024821560-4" data-value="de-DE" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Deutsch</li><li id="item1607024821560-5" data-value="bs-BA" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Bosanski</li><li id="item1607024821560-6" data-value="hr-HR" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Hrvatski</li><li id="item1607024821560-7" data-value="da-DK" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Dansk</li><li id="item1607024821560-8" data-value="sk-SK" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Slovenčina</li><li id="item1607024821560-9" data-value="tr" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Türkçe</li><li id="item1607024821560-10" data-value="sv" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Svenska</li><li id="item1607024821560-11" data-value="ja-JP" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">日本語</li><li id="item1607024821560-12" data-value="is-IS" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Íslenska</li><li id="item1607024821560-13" data-value="lv" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Latviešu</li><li id="item1607024821560-14" data-value="bg-BG" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Английски</li><li id="item1607024821560-15" data-value="ro" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Română</li><li id="item1607024821560-16" data-value="no" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Engelsk</li><li id="item1607024821560-17" data-value="fr-FR" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Français</li><li id="item1607024821560-18" data-value="cs-CZ" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Česky</li><li id="item1607024821560-19" data-value="hu-HU" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Magyar</li><li id="item1607024821560-20" data-value="pl" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Polski</li><li id="item1607024821560-21" data-value="pt-PT" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Portuguese</li><li id="item1607024821560-22" data-value="el-GR" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Ελληνικά</li><li id="item1607024821560-23" data-value="hi" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">हिंदी</li><li id="item1607024821560-24" data-value="sl-SI" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Slovenščina</li><li id="item1607024821560-25" data-value="id" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Bahasa Indonesia</li><li id="item1607024821560-26" data-value="am-ET" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">አማርኛ</li><li id="item1607024821560-27" data-value="uk-UA" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Українська</li><li id="item1607024821560-28" data-value="fi-FI" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Englanti</li><li id="item1607024821560-29" data-value="pt-BR" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Português (Brasil)</li><li id="item1607024821560-30" data-value="vi-VN" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Tiếng Việt</li><li id="item1607024821560-31" data-value="zh-SP" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">中文（简体）</li><li id="item1607024821560-32" data-value="ca-ES" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Català</li><li id="item1607024821560-33" data-value="nl-NL" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Nederlands</li><li id="item1607024821560-34" data-value="ar" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">العربية</li><li id="item1607024821560-35" data-value="zu" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Zulu</li><li id="item1607024821560-36" data-value="sr" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Srpski</li><li id="item1607024821560-37" data-value="ru-RU" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Русский</li><li id="item1607024821560-38" data-value="it-IT" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Italiano</li><li id="item1607024821560-39" data-value="es-ES" role="option" style="height: 30px; line-height: 28px; width: 200px;" class="">Español</li></ul><select onkeypress="if(event.keyCode==13){ $(this).click();}" onchange="changeLanguage($(this).val())" id="DefaultLang" name="DefaultLang" class="cmblang reverse invisible" style="visibility: hidden; height: 32px;"><option value="np-NP">नेपाली</option> <option value="kk-KZ">Қазақша</option> <option value="de-DE">Deutsch</option> <option value="bs-BA">Bosanski</option> <option value="hr-HR">Hrvatski</option> <option value="da-DK">Dansk</option> <option value="sk-SK">Slovenčina</option> <option value="tr">Türkçe</option> <option value="sv">Svenska</option> <option value="ja-JP">日本語</option> <option value="is-IS">Íslenska</option> <option value="lv">Latviešu</option> <option value="bg-BG">Английски</option> <option value="ro">Română</option> <option value="no">Engelsk</option> <option value="fr-FR">Français</option> <option value="cs-CZ">Česky</option> <option value="hu-HU">Magyar</option> <option value="pl">Polski</option> <option value="pt-PT">Portuguese</option> <option value="el-GR">Ελληνικά</option> <option value="hi">हिंदी</option> <option value="sl-SI">Slovenščina</option> <option value="id">Bahasa Indonesia</option> <option value="am-ET">አማርኛ</option> <option value="uk-UA">Українська</option> <option value="fi-FI">Englanti</option> <option value="pt-BR">Português (Brasil)</option> <option value="vi-VN">Tiếng Việt</option> <option value="zh-SP">中文（简体）</option> <option value="ca-ES">Català</option> <option value="nl-NL">Nederlands</option> <option value="ar">العربية</option> <option value="zu">Zulu</option> <option value="sr">Srpski</option> <option value="ru-RU">Русский</option> <option selected="selected" value="en">English</option> <option value="it-IT">Italiano</option> <option value="es-ES">Español</option></select></div></div> <div class="powered__by__btcpayserver">
+                        Powered by <a target="_blank" href="https://github.com/btcpayserver/btcpayserver">BTCPay Server</a></div></div></div></div>
+    </invoice>
+    <script type="text/javascript">
+    var availableLanguages = ["np-NP","kk-KZ","de-DE","bs-BA","hr-HR","da-DK","sk-SK","tr","sv","ja-JP","is-IS","lv","bg-BG","ro","no","fr-FR","cs-CZ","hu-HU","pl","pt-PT","el-GR","hi","sl-SI","id","am-ET","uk-UA","fi-FI","pt-BR","vi-VN","zh-SP","ca-ES","nl-NL","ar","zu","sr","ru-RU","en","it-IT","es-ES"];;
+    var storeDefaultLang = "en";
+    var fallbackLanguage = "en";
+    startingLanguage = computeStartingLanguage();
+    i18next
+        .use(window.i18nextXHRBackend)
+        .init({
+            backend: {
+                loadPath: "/locales/{{lng}}.json"
+            },
+            lng: startingLanguage,
+            fallbackLng: fallbackLanguage,
+            nsSeparator: false,
+            keySeparator: false
+        });
+
+    function computeStartingLanguage() {
+        if (urlParams.lang && isLanguageAvailable(urlParams.lang)) {
+            return urlParams.lang;
+        }
+        else if (isLanguageAvailable(storeDefaultLang)) {
+            return storeDefaultLang;
+        } else {
+            return fallbackLanguage;
+        }
+    }
+
+    function changeLanguage(lang) {
+        if (isLanguageAvailable(lang)) {
+            i18next.changeLanguage(lang);
+        }
+    }
+
+    function isLanguageAvailable(languageCode) {
+        return availableLanguages.indexOf(languageCode) >= 0;
+    }
+
+    var i18n = new VueI18next(i18next);
+    Vue.config.ignoredElements = [
+        'line-items',
+        'low-fee-timeline',
+        // Ignoring custom HTML5 elements, eg: bp-spinner
+        /^bp-/
+    ];
+    var eventBus = new Vue();
+    var checkoutCtrl = new Vue({
+        i18n: i18n,
+        el: '#checkoutCtrl',
+        data: {
+            srvModel: initialSrvModel,
+            end: new Date(),
+            expirationPercentage: 0,
+            timerText: "59:53",
+            emailAddressInput: "",
+            emailAddressInputDirty: false,
+            emailAddressInputInvalid: false,
+            emailAddressFormSubmitting: false,
+            lineItemsExpanded: false,
+            changingCurrencies: false,
+            loading: true,
+            isModal: initialSrvModel.isModal
+        },
+        computed: {
+            expiringSoon: function(){
+                return this.expirationPercentage >= 75 && !this.invoiceUnpayable && !this.invoicePaid;
+            },
+            showPaymentUI: function(){
+                return !this.showEmailForm && !this.invoiceUnpayable && !this.invoicePaid;
+            },
+            showEmailForm: function(){
+                return this.srvModel.requiresRefundEmail && (!this.srvModel.customerEmail || !this.validateEmail(this.srvModel.customerEmail)) && !this.invoiceUnpayable;
+            },
+            showRecommendedFee: function(){
+                return  this.srvModel.showRecommendedFee && this.srvModel.feeRate != 0;
+            },
+            invoiceUnpayable: function(){
+                return  ["expired", "invalid"].indexOf(this.srvModel.status) >= 0;
+            },
+            invoicePaid: function(){
+                return  ["complete", "confirmed", "paid"].indexOf(this.srvModel.status) >= 0;
+            }
+        },
+        mounted: function(){
+            this.startProgressTimer();
+            this.listenIn();
+            this.onDataCallback(this.srvModel);
+            if (this.srvModel.status === "new" && this.srvModel.txCount > 1) {
+                this.onlyExpandLineItems();
+            }
+            window.parent.postMessage("loaded", "*");
+            jQuery("invoice").fadeOut(0).fadeIn(300);
+            window.closePaymentMethodDialog = this.closePaymentMethodDialog.bind(this);
+            this.loading = false;
+        },
+        methods: {
+            onlyExpandLineItems: function() {
+                if (!this.lineItemsExpanded) {
+                    this.toggleLineItems();
+                }},
+            toggleLineItems: function() {
+                this.lineItemsExpanded ? $("line-items").slideUp() : $("line-items").slideDown();
+                this.lineItemsExpanded = !this.lineItemsExpanded;
+            },
+            openPaymentMethodDialog: function() {
+                var content = $("#vexPopupDialog").html();
+                vex.open({
+                    unsafeContent: content
+                });
+            },
+            closePaymentMethodDialog: function(currencyId) {
+                vex.closeAll();
+                this.changeCurrency(currencyId);
+            },
+            changeCurrency: function (currency) {
+                if (currency !== null && this.srvModel.paymentMethodId !== currency) {
+                    this.changingCurrencies = true;
+                    this.srvModel.paymentMethodId = currency;
+                    this.fetchData();
+                    this.closePaymentMethodDialog(null);
+                }
+            },
+            close: function(){
+                $("invoice").fadeOut(300, function () {
+                    window.parent.postMessage("close", "*");
+                });
+            },
+            validateEmail: function (email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            },
+            startProgressTimer: function(){
+                var timeLeftS = this.endDate? (this.endDate.getTime() - new Date().getTime())/1000 : this.srvModel.expirationSeconds;
+                this.expirationPercentage = 100 - ((timeLeftS / this.srvModel.maxTimeSeconds) * 100);
+                this.timerText = this.updateTimerText(timeLeftS);
+                if( this.expirationPercentage < 100 &&  (this.srvModel.status === "paidPartial" || this.srvModel.status === "new")){
+                    setTimeout(this.startProgressTimer, 500);
+                }
+            },
+            updateTimerText: function (timer) {
+                if (timer >= 0) {
+                    var minutes = parseInt(timer / 60, 10);
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    var seconds = parseInt(timer % 60, 10);
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    return minutes + ":" + seconds;
+                } else {
+                    return "00:00";
+                }
+            },
+            listenIn: function(){
+                var self = this;
+                var socket = null;
+                var supportsWebSockets = 'WebSocket' in window && window.WebSocket.CLOSING === 2;
+                if (supportsWebSockets) {
+                    var loc = window.location, ws_uri;
+                    if (loc.protocol === "https:") {
+                        ws_uri = "wss:";
+                    } else {
+                        ws_uri = "ws:";
+                    }
+                    ws_uri += "//" + loc.host;
+                    ws_uri += loc.pathname + "/status/ws?invoiceId=" + this.srvModel.invoiceId;
+                    try {
+                        socket = new WebSocket(ws_uri);
+                        socket.onmessage = function (e) {
+                            self.fetchData();
+                        };
+                        socket.onerror = function (e) {
+                            console.error("Error while connecting to websocket for invoice notifications (callback)");
+                        };
+                    }
+                    catch (e) {
+                        console.error("Error while connecting to websocket for invoice notifications");
+                    }
+                }
+                var self = this;
+                function watcher(){
+                    setTimeout(function(){
+                        if (socket === null || socket.readyState !== 1) {
+                            self.fetchData();
+                        }
+                        watcher();
+                    }, 2000);
+                }
+                watcher();
+            },
+            fetchData: function(){
+                var self = this;
+                $.ajax({
+                    url: window.location.pathname + "/status?invoiceId=" + this.srvModel.invoiceId + "&paymentMethodId=" + this.srvModel.paymentMethodId,
+                    type: "GET",
+                    cache: false
+                })
+                .done(function (data) {
+                    self.onDataCallback.bind(self)(data);
+                })
+            },
+            onDataCallback : function(jsonData){
+                if (this.srvModel.status !== jsonData.status) {
+                    window.parent.postMessage({ "invoiceId": this.srvModel.invoiceId, "status": jsonData.status }, "*");
+                }
+                if (jsonData.paymentMethodId === this.srvModel.paymentMethodId) {
+                    this.changingCurrencies = false;
+                }
+                // displaying satoshis for lightning payments
+                jsonData.cryptoCodeSrv = jsonData.cryptoCode;
+                // expand line items to show details on amount due for multi-transaction payment
+                if (this.srvModel.txCount === 1 && jsonData.txCount > 1) {
+                    this.onlyExpandLineItems();
+                }
+                var newEnd = new Date();
+                newEnd.setSeconds(newEnd.getSeconds()+ jsonData.expirationSeconds);
+                this.endDate = newEnd;
+                // updating ui
+                this.srvModel = jsonData;
+                if (this.invoicePaid && jsonData.redirectAutomatically && jsonData.merchantRefLink) {
+                    this.loading = true;
+                    setTimeout(function () {
+                        if (this.isModal && window.top.location == jsonData.merchantRefLink){
+                            this.close();
+                        } else {
+                            window.top.location = jsonData.merchantRefLink;
+                        }
+                    }.bind(this), 2000);
+                }
+            },
+            onEmailChange: function(){
+                this.emailAddressInputDirty = true;
+                this.emailAddressInputInvalid = false;
+            },
+            onEmailSubmit : function(){
+                var self = this;
+                if (this.validateEmail(this.emailAddressInput)) {
+                    this.emailAddressFormSubmitting = true;
+                    // Push the email to a server, once the reception is confirmed move on
+                    $.ajax({
+                        url: window.location.pathname + "/UpdateCustomer?invoiceId=" +this.srvModel.invoiceId,
+                        type: "POST",
+                        data: JSON.stringify({ Email: this.emailAddressInput }),
+                        contentType: "application/json; charset=utf-8"
+                    })
+                    .done(function () {
+                        self.srvModel.customerEmail = self.emailAddressInput;
+                    }).always(function () {
+                        self.emailAddressFormSubmitting = false;
+                    });
+                } else {
+                    this.emailAddressInputInvalid = true;
+                }
+            }
+        }
+    });
+    </script>
+
+
+<script type="text/x-template" id="bitcoin-method-checkout-template">
+    <div>
+        <div class="bp-view payment scan" id="scan" v-bind:class="{ 'active': currentTab == 'scan'}">
+            <div class="payment__scan">
+                <img v-bind:src="srvModel.cryptoImage" class="qr_currency_icon" v-if="scanDisplayQr"/>
+                <qrcode v-bind:value="scanDisplayQr" :options="{ width: 256, margin: 1, color: {dark:'#000', light:'#f5f5f7'} }" tag="svg" v-if="scanDisplayQr"></qrcode>
+                <div class="payment__spinner qr_currency_icon" style="padding-right: 20px;">
+                    <partial name="Checkout-Spinner"/>
+                </div>
+            </div>
+            <div class="payment__details__instruction__open-wallet" v-if="srvModel.invoiceBitcoinUrl">
+                <a class="payment__details__instruction__open-wallet__btn action-button" target="_top" v-bind:href="srvModel.invoiceBitcoinUrl">
+                    <span>{{$t("Open in wallet")}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="bp-view payment manual-flow" id="copy" v-bind:class="{ 'active': currentTab == 'copy'}">
+            <div class="manual__step-two__instructions">
+                <span v-html="$t('CompletePay_Body', srvModel)"></span>
+            </div>
+            <div class="copyLabelPopup">
+                <span>{{$t("Copied")}}</span>
+            </div>
+            <nav class="copyBox">
+                <div class="copySectionBox bottomBorder">
+                    <label>{{$t("Amount")}}</label>
+                    <div class="copyAmountText copy-cursor _copySpan">
+                        <span>{{srvModel.btcDue}}</span> {{ srvModel.cryptoCode }}
+                    </div>
+                </div>
+                <div class="separatorGem"></div>
+                <div class="copySectionBox bottomBorder">
+                    <label>{{$t("Address")}}</label>
+                    <div class="inputWithIcon _copyInput">
+                        <input type="text" class="checkoutTextbox" v-bind:value="srvModel.btcAddress" readonly="readonly"/>
+                        <img v-bind:src="srvModel.cryptoImage"/>
+                    </div>
+                </div>
+                <div class="separatorGem" v-if="srvModel.invoiceBitcoinUrl"></div>
+                <div class="copySectionBox" v-if="srvModel.invoiceBitcoinUrl" :title="$t(hasPayjoin? 'BIP21 payment link' : 'BIP21 payment link with payjoin support') " >
+                    <label>{{$t("Payment link")}}</label>
+                    <div class="inputWithIcon _copyInput">
+                        <input type="text" class="checkoutTextbox" v-bind:value="srvModel.invoiceBitcoinUrl" readonly="readonly"/>
+                        <img v-bind:src="srvModel.cryptoImage" v-if="hasPayjoin"/>
+                        <i class="fa fa-user-secret" v-else/>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</script>
+
+<script type="text/x-template" id="bitcoin-method-checkout-header-template">
+    <div class="payment-tabs">
+        <div class="payment-tabs__tab " id="scan-tab" v-on:click="switchTab('scan')"  v-bind:class="{ 'active': currentTab == 'scan'}" >
+            <span>{{$t("Scan")}}</span>
+        </div>
+        <div class="payment-tabs__tab" id="copy-tab" v-on:click="switchTab('copy')"  v-bind:class="{ 'active': currentTab == 'copy'}" >
+            <span>{{$t("Copy")}}</span>
+        </div>
+            <div id="tabsSlider" class="payment-tabs__slider"  v-bind:class="['slide-'+currentTab]"></div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    Vue.component('BitcoinLikeMethodCheckout',
+        {
+            props: ["srvModel"],
+            template: "#bitcoin-method-checkout-template",
+            components: {
+                qrcode: VueQrcode,
+                coinswitch: CoinSwitchComponent
+            },
+            data: function() {
+                return {
+                    selectedThirdPartyProcessor: "",
+                    currentTab: "scan"
+                }
+            },
+            computed: {
+                hasPayjoin: function(){
+                    return this.srvModel.invoiceBitcoinUrl.indexOf('pj=') === -1;
+                },
+                coinswitchAmountDue: function() {
+                    return this.srvModel.coinSwitchAmountMarkupPercentage
+                        ? this.srvModel.btcDue * (1 + (this.srvModel.coinSwitchAmountMarkupPercentage / 100))
+                        : this.srvModel.btcDue;
+                },
+                scanDisplayQr: function() {
+                    return this.srvModel.invoiceBitcoinUrlQR;
+                }
+            },
+            mounted: function() {
+                var self = this;
+                eventBus.$on("tab-switched",
+                    function(tab) {
+                        self.currentTab = tab;
+            });
+        }
+    });
+
+    Vue.component('BitcoinLikeMethodCheckoutHeader', {
+        props: ["srvModel"],
+        template: "#bitcoin-method-checkout-header-template",
+        data: function() {
+            return {
+                currentTab: "scan"
+            };
+        },
+        methods: {
+            switchTab: function(tab) {
+                this.currentTab = tab;
+                eventBus.$emit("tab-switched", tab);
+            }
+        }
+    });
+
+    $(document).ready(function() {
+        // Clipboard Copy
+        var copySpan = new Clipboard('._copySpan', {
+                target: function(trigger) {
+                    return copyElement(trigger, 0, 65).firstChild;
+                }
+        });
+        var copyInput = new Clipboard('._copyInput', {
+                target: function(trigger) {
+                    return copyElement(trigger, 4, 65).firstChild;
+                }
+        });
+
+        function copyElement(trigger, popupLeftModifier, popupTopModifier) {
+            var elm = $(trigger);
+            var position = elm.offset();
+            position.top -= popupLeftModifier + $(window).scrollTop();
+            position.left += (elm.width() / 2) - popupTopModifier;
+            $(".copyLabelPopup").css(position).addClass("copied");
+            elm.removeClass("copy-cursor").addClass("clipboardCopied");
+            setTimeout(clearSelection, 100);
+            setTimeout(function() {
+                    elm.removeClass("clipboardCopied").addClass("copy-cursor");
+                    $(".copyLabelPopup").removeClass("copied");
+                },
+                1000);
+            return trigger;
+        }
+
+        function clearSelection() {
+            if (window.getSelection) {
+                window.getSelection().removeAllRanges();
+            } else if (document.selection) {
+                document.selection.empty();
+            }
+        }
+        // Disable enter key
+        $(document).keypress(
+            function(event) {
+                if (event.which === '13') {
+                    event.preventDefault();
+                }
+            }
+        );
+    });
+</script>
+
+
+<script type="text/x-template" id="lightning-method-checkout-template">
+    <div>
+        <div class="bp-view payment scan" id="scan" v-bind:class="{ 'active': currentTab == 'scan'}">
+            <div class="wrapBtnGroup" v-bind:class="{ invisible: !scanDisplayQr }">
+                <div class="btnGroupLnd">
+                    <button
+                            v-on:click="toggleLightningData('bolt11')"
+                            v-bind:class="{ active: currentLightningDisplay === 'bolt11' }"
+                            v-bind:title="$t('BOLT 11 Invoice')">
+                            {{$t("BOLT 11 Invoice")}}
+                    </button>
+                    <button
+                        v-on:click="toggleLightningData('node')"
+                        v-bind:class="{ active: currentLightningDisplay === 'node' }"
+                        v-bind:title="$t('Node Info')">
+                        {{$t("Node Info")}}
+                    </button>
+                </div>
+            </div>
+            <div class="payment__scan">
+                <img v-bind:src="srvModel.cryptoImage" class="qr_currency_icon" v-if="scanDisplayQr"/>
+                <qrcode v-bind:value="scanDisplayQr" :options="{ width: 256, margin: 1, color: {dark:'#000', light:'#f5f5f7'} }" tag="svg" v-if="scanDisplayQr"></qrcode>
+                <div class="payment__spinner qr_currency_icon" style="padding-right: 20px;">
+                    <partial name="Checkout-Spinner"/>
+                </div>
+            </div>
+            <div class="payment__details__instruction__open-wallet" v-if="srvModel.invoiceBitcoinUrl">
+                <a class="payment__details__instruction__open-wallet__btn action-button" target="_top" v-bind:href="srvModel.invoiceBitcoinUrl">
+                    <span>{{$t("Open in wallet")}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="bp-view payment manual-flow" id="copy" v-bind:class="{ 'active': currentTab == 'copy'}">
+            <div class="manual__step-two__instructions">
+                <span v-html="$t('CompletePay_Body', srvModel)"></span>
+            </div>
+            <div class="copyLabelPopup">
+                <span>{{$t("Copied")}}</span>
+            </div>
+            <nav  class="copyBox">
+                <div class="copySectionBox bottomBorder">
+                    <label>{{$t("BOLT 11 Invoice")}}</label>
+                    <div class="inputWithIcon _copyInput">
+                        <input type="text" class="checkoutTextbox" v-bind:value="srvModel.btcAddress" readonly="readonly"/>
+                        <img v-bind:src="srvModel.cryptoImage"/>
+                    </div>
+                </div>
+                <div class="separatorGem"></div>
+                <div class="copySectionBox">
+                    <label>{{$t("Node Info")}}</label>
+                    <div class="inputWithIcon _copyInput">
+                        <input type="text" class="checkoutTextbox" v-bind:value="srvModel.peerInfo" readonly="readonly"/>
+                        <img v-bind:src="srvModel.cryptoImage"/>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="lightning-method-checkout-header-template">
+    <div class="payment-tabs">
+        <div class="payment-tabs__tab " id="scan-tab" v-on:click="switchTab('scan')"  v-bind:class="{ 'active': currentTab == 'scan'}" >
+            <span>{{$t("Scan")}}</span>
+        </div>
+        <div class="payment-tabs__tab" id="copy-tab" v-on:click="switchTab('copy')"  v-bind:class="{ 'active': currentTab == 'copy'}" >
+            <span>{{$t("Copy")}}</span>
+        </div>
+        <div id="tabsSlider" class="payment-tabs__slider"  v-bind:class="['slide-'+currentTab]"></div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    Vue.component('LightningLikeMethodCheckout',
+        {
+            props: ["srvModel"],
+            template: "#lightning-method-checkout-template",
+            components: {
+                qrcode: VueQrcode
+            },
+            data: function() {
+                return {
+                    currentLightningDisplay: "bolt11",
+                    selectedThirdPartyProcessor: "",
+                    currentTab: "scan"
+                }
+            },
+            computed: {
+                scanDisplayQr: function() {
+                    if (this.currentLightningDisplay === "node") {
+                        return this.srvModel.peerInfo;
+                    }
+                    return this.srvModel.invoiceBitcoinUrlQR;
+                }
+            },
+            methods: {
+                toggleLightningData: function(display) {
+                    this.currentLightningDisplay = display;
+                }
+            },
+            mounted: function() {
+                var self = this;
+                eventBus.$on("tab-switched",
+                    function(tab) {
+                        self.currentTab = tab;
+            });
+        }
+    });
+
+    Vue.component('LightningLikeMethodCheckoutHeader', {
+        props: ["srvModel"],
+        template: "#lightning-method-checkout-header-template",
+        data: function() {
+            return {
+                currentTab: "scan"
+            };
+        },
+        methods: {
+            switchTab: function(tab) {
+                this.currentTab = tab;
+                eventBus.$emit("tab-switched", tab);
+            }
+        }
+    });
+
+    $(document).ready(function() {
+        // Clipboard Copy
+        var copySpan = new Clipboard('._copySpan', {
+                target: function(trigger) {
+                    return copyElement(trigger, 0, 65).firstChild;
+                }
+        });
+        var copyInput = new Clipboard('._copyInput', {
+                target: function(trigger) {
+                    return copyElement(trigger, 4, 65).firstChild;
+                }
+        });
+
+        function copyElement(trigger, popupLeftModifier, popupTopModifier) {
+            var elm = $(trigger);
+            var position = elm.offset();
+            position.top -= popupLeftModifier + $(window).scrollTop();
+            position.left += (elm.width() / 2) - popupTopModifier;
+            $(".copyLabelPopup").css(position).addClass("copied");
+            elm.removeClass("copy-cursor").addClass("clipboardCopied");
+            setTimeout(clearSelection, 100);
+            setTimeout(function() {
+                    elm.removeClass("clipboardCopied").addClass("copy-cursor");
+                    $(".copyLabelPopup").removeClass("copied");
+                },
+                1000);
+            return trigger;
+        }
+
+        function clearSelection() {
+            if (window.getSelection) {
+                window.getSelection().removeAllRanges();
+            } else if (document.selection) {
+                document.selection.empty();
+            }
+        }
+        // Disable enter key
+        $(document).keypress(
+            function(event) {
+                if (event.which === '13') {
+                    event.preventDefault();
+                }
+            }
+        );
+    });
+</script>
+
+
+
+</body></html>

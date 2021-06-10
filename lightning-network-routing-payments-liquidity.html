@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="keywords" content="Bitcoin,Lightning Network"/><meta name="description" content="The Lightning Network is a second layer scaling solution for Bitcoin and similar cryptocurrencies.
+This post shows how channel capacity and liquidity affect payment routing in the Lightning Network.
+"/><meta name="theme-color" content="#0d151e"/><meta name="msapplication-TileColor" content="#0d151e"/><meta name="msapplication-config" content="/browserconfig.xml"/><meta property="twitter:creator" content="@dennisreimann"/><meta property="twitter:card" content="summary_large_image"/><meta property="twitter:title" content="How Channel Capacity and Liquidity affect Payment Routing · d11n 🍯🦡⚡️🕗🔗"/><meta property="twitter:description" content="The Lightning Network is a second layer scaling solution for Bitcoin and similar cryptocurrencies.
+This post shows how channel capacity and liquidity affect payment routing in the Lightning Network.
+"/><meta property="twitter:image" content="https://d11n.net/images/lightning-network/routing-A-B-C-1.png"/><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#0d151e"/><link rel="stylesheet" href="/styles/main.css"/><link rel="manifest" href="/site.webmanifest"/><title>How Channel Capacity and Liquidity affect Payment Routing · d11n 🍯🦡⚡️🕗🔗</title></head><body><header class="header"><div class="wrap"><a class="home" href="/"><svg viewbox="0 0 423 369" xmlns="http://www.w3.org/2000/svg" class="logo">
+  <g fill-rule="nonzero" fill="none">
+    <path d="M225.233 70.6l-51.9 297.4h-45.6L179.63 70.6h45.603zm82-70l-51.9 297.4h-45.6L261.63.6h45.603z" class="accent" />
+    <path d="M422.2 174c0 3.8-.25 8.1-.75 12.9-.5 4.8-1.25 9.6-2.25 14.4L402.7 297h-43.8l16.8-95.7c.4-1.8.7-3.65.9-5.55.2-1.9.3-3.75.3-5.55 0-4.2-.85-7.8-2.55-10.8-1.7-3-4.95-4.5-9.75-4.5-6 0-11.15 2.85-15.45 8.55-4.3 5.7-7.25 13.05-8.85 22.05L324.4 297h-43.8l20.7-117.9 1.5-9.15c.6-3.7 1.15-7.4 1.65-11.1.444-3.289.889-6.38 1.333-9.274l.478-3.106c.337-2.247.583-4.07.739-5.47h41.4l-.204 1.463c-.278 2.033-.578 4.4-.9 7.1l-.246 2.087c-.5 4.3-1.05 8.35-1.65 12.15h.6c4-7.8 9.5-14.35 16.5-19.65 7-5.3 15.3-7.95 24.9-7.95 6.2 0 11.55 1.15 16.05 3.45 4.5 2.3 8.1 5.25 10.8 8.85 2.7 3.6 4.7 7.65 6 12.15 1.3 4.5 1.95 8.95 1.95 13.35zM155.1 70.2L115.5 297H73.8l3.3-20.1h-.3c-3.6 7-8.2 12.9-13.8 17.7-5.6 4.8-13.1 7.2-22.5 7.2-6.8 0-12.75-1.4-17.85-4.2-5.1-2.8-9.3-6.65-12.6-11.55-3.3-4.9-5.8-10.8-7.5-17.7C.85 261.45 0 253.9 0 245.7c0-12.2 1.45-24.75 4.35-37.65 2.9-12.9 7.2-24.7 12.9-35.4S29.9 153.2 38.1 146.4c8.2-6.8 17.7-10.2 28.5-10.2 9 0 15.8 2.05 20.4 6.15 4.6 4.1 7.5 9.45 8.7 16.05h.9l15.6-88.2h42.9zM74.4 173.7c-5.2 0-9.7 2.2-13.5 6.6-3.8 4.4-7 9.85-9.6 16.35-2.6 6.5-4.55 13.5-5.85 21-1.3 7.5-1.95 14.35-1.95 20.55 0 7.6 1.25 13.8 3.75 18.6 2.5 4.8 6.65 7.2 12.45 7.2 4.8 0 9.1-2.15 12.9-6.45 3.8-4.3 7-9.65 9.6-16.05 2.6-6.4 4.6-13.3 6-20.7 1.4-7.4 2.1-14.1 2.1-20.1 0-8-1.25-14.5-3.75-19.5s-6.55-7.5-12.15-7.5z" class="color" />
+  </g>
+</svg>
+</a></div></header><main class="main"><div class="wrap"><div class="article lightning-network-routing-payments-liquidity"><h1 id="how-channel-capacity-and-liquidity-affect-payment-routing"><a class="header-anchor" href="#how-channel-capacity-and-liquidity-affect-payment-routing">#</a> How Channel Capacity and Liquidity affect Payment Routing</h1>
+<h2 id="lightning-network-explained"><a class="header-anchor" href="#lightning-network-explained">#</a> Lightning Network explained</h2>
+<p>The Lightning Network is a second layer scaling solution for Bitcoin and similar cryptocurrencies.
+It promises faster transactions and lower fees, enabled by a network of bidirectional payment channels.
+This post shows how channel capacity and liquidity affect payment routing in the Lightning Network.</p>
+<p>In the article about the
+<a href="/lightning-network-payment-channel-lifecycle.html">lifecycle of a payment channel</a>
+we learned how basic transactions work.
+Beyond that, the Lightning Network – being a network of payment channels – enables transactions across channels as well.
+Payments can be routed across multiple hops until they reach the payee.
+However, the channel <em>capacity</em> and <em>liquidity</em> along the route play an important and constraining role in pathfinding.</p>
+<h2 id="definitions"><a class="header-anchor" href="#definitions">#</a> Definitions</h2>
+<p><mark><strong>Capacity</strong> is defined as the total amount of funds in a payment channel.</mark>
+Once a channel is created the capacity is fixed as the funds get settled by the funding transaction.</p>
+<p>The term <strong>balance</strong> describes the distribution of funds between the channel peers.
+Terminology-wise the balance affects <em>liquidity</em>, as we need to distinguish between <em>inbound and outbound liquidity</em>.</p>
+<p>From a user’s perspective, <mark><strong>inbound liquidity</strong> are the funds on the remote side of the channel; the amount that the user would be able to receive.</mark>
+For example merchants would primarily need inbound liquidity in order to receive payments.<br>
+As the exact opposite <mark><strong>outbound liquidity</strong> are the funds on the own side of the channel; the amount that the user would be able to send.</mark>
+Normal users/customers mostly need outbound liquidity to make payments and purchase goods.</p>
+<p><strong>Routing</strong> describes the process of finding a payment path for peers that have no direct channel connection.
+Pathfinding is constrained by the capacity and liquidity along the route.
+As a general rule of thumb you can say, that the longer the path, the more limiting these factors will be.</p>
+<p>Sidenote: <em>Hash Time-Locked Contracts</em> (short: HTLC) are used to secure the funds while they are moving along the route.
+They ensure that the money does not get stolen on its way to the payee.
+The nodes along the route can charge fees as a commission for their service.
+These fees are also included in the HTLC each peer passes on.
+Both, the HTLC and fees are topics in their own rights and might be discussed in a future article.</p>
+<h2 id="routing-constraints"><a class="header-anchor" href="#routing-constraints">#</a> Routing constraints</h2>
+<p>With these definitions out of the way, here is an analogy that might help to understand the movement of funds:
+<mark>Imagine the funds in a payment channel as beads on a string.</mark>
+Or for the elderly among us: as beads in an abacus.  🧮<br>
+They can travel from one side to the other, but won’t leave the string, <em>even when they are routed</em>.
+The number of beads (capacity) is fixed and the side they are on (balance) symbolizes either in- or outbound liquidity.</p>
+<p>Enough of the dry theory, let’s have a look at a practical example:
+The following diagram shows a case, where <strong>A</strong>lice wants to pay <strong>C</strong>harlie the amount of 4 mBTC (the unit for the examples is arbitrary).
+The balance of her own channel with Charlie does not suffice:
+She only has an outbound liquidity of 2 (red line).
+But her channel with <strong>B</strong>ob has an outbound liquidity of 6, so the payment can embark on that route (dashed green line).</p>
+<figure><a href="/images/lightning-network/routing-A-B-C-1.png"><img src="/images/lightning-network/routing-A-B-C-1.png" alt=""></a><figcaption>Alice has to go through Bob to send 4 mBTC to Charlie.</figcaption></figure>
+<p>So Alice creates a commitment transaction with an HTLC, which grants Charlie the amount of 4.
+She sends it to Bob, so that he can pass it along.</p>
+<p>At this point, the payment could still fail:
+Namely in the case that Bob’s outbound capacity to Charlie would not suffice (dashed gray line).
+What trips up most people in their understanding:
+<mark>Bob cannot and take the 4 he received from Alice, move them over to his channel with Charlie and pass them on.</mark>
+The funds can not directly „change the channel“:
+As eachs channel capacity is fixed, the routing only works if Bob’s outbound capacity in his channel with Charlie is at least 4 …</p>
+<h2 id="balance-changes"><a class="header-anchor" href="#balance-changes">#</a> Balance changes</h2>
+<p>Luckily for Alice this is the case:
+Bob has an outbound capacity of 5 in his channel with Charlie.
+The payment gets routed as we can see in the following sequence of diagrams.</p>
+<figure><a href="/images/lightning-network/routing-A-B-C-2.png"><img src="/images/lightning-network/routing-A-B-C-2.png" alt=""></a><figcaption>Alice payed Bob 4 mBTC (green line) and Bob pays Charlie 4 mBTC (dashed green line).</figcaption></figure>
+<p>This is what the balances look like after the routing operation has succeeded:</p>
+<figure><a href="/images/lightning-network/routing-A-B-C-3.png"><img src="/images/lightning-network/routing-A-B-C-3.png" alt=""></a><figcaption>A sending through B changed the balance between B and C.</figcaption></figure>
+<p>Sidenote: Because of the HTLCs, routing operations are atomic.
+This means that either the entire operation succeeds or nothing happens.
+But for the sake of a more comprehensible explanation the diagrams show a gradual way of the funds travelling.</p>
+<p>As we can see, routing the payment from Alice to Charlie through Bob changed the balances of all channels along the way:</p>
+<ul>
+<li>A-B moved from 6-4 to 2-8</li>
+<li>B-C moved from 5-5 to 1-9</li>
+</ul>
+<p>This is especially of importance for another type of stakeholders in the system:
+Routing node operators have to constantly <a href="https://blog.muun.com/rebalancing-in-the-lightning-network/">rebalance</a> their channels to provide the right kind of liquidity for the respective flow of funds.</p>
+<p>To briefly summarize these points, one could say that …</p>
+<ul>
+<li>Merchants need inbound liquidity.</li>
+<li>Customers need outbound liquidity.</li>
+<li>Routing nodes have to adjust their channel balances based on the flow of funds.</li>
+</ul>
+<p>These points are a big topic regarding the adoption currently:
+As channel capacity and liquidity are the constraining factors, there are already services catering to the needs of merchants:
+The Lighting channel-opening service <a href="https://www.bitrefill.com/thor-lightning-network-channels/">Thor by Bitrefill</a> was the first to my knowledge, quickly being followed by <a href="https://blog.lightning.engineering/posts/2019/03/20/loop.html">Lightning Labs’ Loop</a>.</p>
+<h2 id="future-development"><a class="header-anchor" href="#future-development">#</a> Future development</h2>
+<p>But not just merchants are dependent on inbound liquidity.
+As we have seen, customers will encounter limitations based on the length of their payment route.</p>
+<p>To accommodate for that, solutions like <a href="https://lightning.engineering/posts/2020-05-07-mpp/">Multi-Path Payments</a> (short: MPP) are already being worked on:
+Instead of traveling along a single route, the funds can be split up and take several different routes.
+This way larger payments will be enabled as the capacity and balance of multiple channels can be factored in.
+For example: With MPP, Alice’s payment to Charlie could be split up to 2 mBTC going through Bob and the other 2 mBTC using another node D as a hop.</p>
+<p>This is just one of many exciting features that are currently finding their way into the Lightning Network specification.
+Stay tuned for more on that 😀</p>
+</div><form method="POST" action="https://pay.d11n.net/api/v1/invoices" class="say-thanks">
+<input type="hidden" name="storeId" value="7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT" />
+<input type="hidden" name="browserRedirect" value="https://d11n.net/thankyou.html" />
+<input type="hidden" name="notifyEmail" value="mail@d11n.net" />
+<input type="hidden" name="currency" value="SATS" />
+<span>Liked this? Say <em>thanks</em> with</span>
+<input id="btcpay-input-price" type="number" name="price" min="1" step="1" value="21" />
+<span>sats.</span>
+<button type="submit" class="cta" name="submit">Donate</button>
+</form></div></main><footer class="footer"><div class="wrap"><p>Follow  <a href="/about.html">me</a> on <a href="https://bitcoinhackers.org/@d11n">Mastodon</a>, <a href="https://twitter.com/_d11n_">Twitter</a> or <a href="https://github.com/DennisReimann">GitHub</a>.</p></div><div class="wrap"><p>Published at block height <time datetime="2019-05-08">575152</time>. <a href="https://github.com/dennisreimann/d11n.net/blob/master/articles/575152-lightning-network-routing-payments-liquidity.md">(GitHub)</a></p><p>Website last updated at block height <time datetime="2021-06-10">687022</time>.</p></div></footer></body></html>

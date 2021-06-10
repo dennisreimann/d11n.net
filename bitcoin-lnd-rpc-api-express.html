@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="keywords" content="Bitcoin,LND,Lightning Network,gRPC,JavaScript,Node,Node.js,Express,API"/><meta name="description" content="I am currently building a dashboard and management application for Bitcoin full nodes with Lightning Network integration.
+This post features how I have build parts of the API layer.
+"/><meta name="theme-color" content="#0d151e"/><meta name="msapplication-TileColor" content="#0d151e"/><meta name="msapplication-config" content="/browserconfig.xml"/><meta property="twitter:creator" content="@dennisreimann"/><meta property="twitter:card" content="summary_large_image"/><meta property="twitter:title" content="Building an API around Bitcoin and LND RPC · d11n 🍯🦡⚡️🕗🔗"/><meta property="twitter:description" content="I am currently building a dashboard and management application for Bitcoin full nodes with Lightning Network integration.
+This post features how I have build parts of the API layer.
+"/><meta property="twitter:image" content="https://d11n.net/images/tutorials/lnd-api.png"/><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/><link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#0d151e"/><link rel="stylesheet" href="/styles/main.css"/><link rel="manifest" href="/site.webmanifest"/><title>Building an API around Bitcoin and LND RPC · d11n 🍯🦡⚡️🕗🔗</title></head><body><header class="header"><div class="wrap"><a class="home" href="/"><svg viewbox="0 0 423 369" xmlns="http://www.w3.org/2000/svg" class="logo">
+  <g fill-rule="nonzero" fill="none">
+    <path d="M225.233 70.6l-51.9 297.4h-45.6L179.63 70.6h45.603zm82-70l-51.9 297.4h-45.6L261.63.6h45.603z" class="accent" />
+    <path d="M422.2 174c0 3.8-.25 8.1-.75 12.9-.5 4.8-1.25 9.6-2.25 14.4L402.7 297h-43.8l16.8-95.7c.4-1.8.7-3.65.9-5.55.2-1.9.3-3.75.3-5.55 0-4.2-.85-7.8-2.55-10.8-1.7-3-4.95-4.5-9.75-4.5-6 0-11.15 2.85-15.45 8.55-4.3 5.7-7.25 13.05-8.85 22.05L324.4 297h-43.8l20.7-117.9 1.5-9.15c.6-3.7 1.15-7.4 1.65-11.1.444-3.289.889-6.38 1.333-9.274l.478-3.106c.337-2.247.583-4.07.739-5.47h41.4l-.204 1.463c-.278 2.033-.578 4.4-.9 7.1l-.246 2.087c-.5 4.3-1.05 8.35-1.65 12.15h.6c4-7.8 9.5-14.35 16.5-19.65 7-5.3 15.3-7.95 24.9-7.95 6.2 0 11.55 1.15 16.05 3.45 4.5 2.3 8.1 5.25 10.8 8.85 2.7 3.6 4.7 7.65 6 12.15 1.3 4.5 1.95 8.95 1.95 13.35zM155.1 70.2L115.5 297H73.8l3.3-20.1h-.3c-3.6 7-8.2 12.9-13.8 17.7-5.6 4.8-13.1 7.2-22.5 7.2-6.8 0-12.75-1.4-17.85-4.2-5.1-2.8-9.3-6.65-12.6-11.55-3.3-4.9-5.8-10.8-7.5-17.7C.85 261.45 0 253.9 0 245.7c0-12.2 1.45-24.75 4.35-37.65 2.9-12.9 7.2-24.7 12.9-35.4S29.9 153.2 38.1 146.4c8.2-6.8 17.7-10.2 28.5-10.2 9 0 15.8 2.05 20.4 6.15 4.6 4.1 7.5 9.45 8.7 16.05h.9l15.6-88.2h42.9zM74.4 173.7c-5.2 0-9.7 2.2-13.5 6.6-3.8 4.4-7 9.85-9.6 16.35-2.6 6.5-4.55 13.5-5.85 21-1.3 7.5-1.95 14.35-1.95 20.55 0 7.6 1.25 13.8 3.75 18.6 2.5 4.8 6.65 7.2 12.45 7.2 4.8 0 9.1-2.15 12.9-6.45 3.8-4.3 7-9.65 9.6-16.05 2.6-6.4 4.6-13.3 6-20.7 1.4-7.4 2.1-14.1 2.1-20.1 0-8-1.25-14.5-3.75-19.5s-6.55-7.5-12.15-7.5z" class="color" />
+  </g>
+</svg>
+</a></div></header><main class="main"><div class="wrap"><div class="article bitcoin-lnd-rpc-api-express"><h1 id="building-an-api-around-bitcoin-and-lnd-rpc"><a class="header-anchor" href="#building-an-api-around-bitcoin-and-lnd-rpc">#</a> Building an API around Bitcoin and LND RPC</h1>
+<h2 id="with-node.js-and-express%2C-for-fun-and-convenience"><a class="header-anchor" href="#with-node.js-and-express%2C-for-fun-and-convenience">#</a> With Node.js and Express, for fun and convenience</h2>
+<p>I am currently building a <a href="https://github.com/dennisreimann/blitzbank-dashboard">dashboard and management application</a> for <a href="https://en.bitcoin.it/wiki/Full_node">Bitcoin full nodes</a> with Lightning Network integration.
+It is supposed to be an easy to use add-on, helping people to run their node and being their own bank.
+The plan is to open source an early version during the next weeks and continuously improving it as the Lightning Network matures.
+This post features how I have build parts of the API layer.</p>
+<h2 id="architecture-and-motivation"><a class="header-anchor" href="#architecture-and-motivation">#</a> Architecture and Motivation</h2>
+<p>The UI is a <a href="https://vuejs.org/">Vue.js</a> single page application that receives its data via an API build with Node.js and <a href="https://expressjs.com/">Express</a>.
+This makes installing and upgrading easy as the whole app ships as a single npm package.
+The Express webserver runs on a self defined port, powers the API and also serves the static files for the UI.</p>
+<p>The API is more or less a convenience layer for accessing the underlying Bitcoin Core and LND RPC APIs.
+Even though both Bitcoin Core and LND offer REST interfaces, there are two main reasons for doing it this way:
+Simply, I have found the RPC interfaces to be nicer to work with and to support more features.
+<mark>Practically, when you are building use cases you often want to aggregate and enhance the payloads of the original API calls.</mark>
+Wrapping them allows you to hide complexity in your custom API and to finetune the responses to the needs of the UI.</p>
+<h3 id="client-library-considerations"><a class="header-anchor" href="#client-library-considerations">#</a> Client library considerations</h3>
+<p>I was surprised by the number of <a href="https://www.npmjs.com/search?q=lnd%20rpc">libraries to work with LND</a> that are already out there.
+Most of them are actively worked on and frequently updated;
+I chose <a href="https://www.npmjs.com/package/ln-service">ln-service</a> which not only seems pretty mature, but is also maintained by <a href="https://twitter.com/alexbosworth">Alex Bosworth</a>, who is working for Lightning Labs – the creators of <a href="https://lightning.engineering/technology.html">LND</a>.</p>
+<p>Most of the <a href="https://www.npmjs.com/search?q=bitcoin%20rpc">Bitcoin RPC libraries on npm</a> are not worked on as actively:
+Even though this might not be really necessary (Bitcoin development does not move as fast as Lightning), you will want to pick one which supports at least promises and async/await respectively.
+For now I have chosen <a href="https://www.npmjs.com/package/bitcoind-rpc">bitcoind-rpc</a>, even though <a href="https://www.npmjs.com/package/bitcoin-core">bitcoin-core</a> looks like a viable alternative.
+Both libraries also support batching requests.</p>
+<h2 id="in-code-we-trust"><a class="header-anchor" href="#in-code-we-trust">#</a> In Code We Trust</h2>
+<p>As I said I will try to release a first version as soon as possible.
+Until then let’s have a look at some implementation details I found nice to work with:
+The API is split into different modules, each of the general concerns exposes its particular endpoints:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">Router</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express&#x27;</span>)
+
+<span class="hljs-keyword">const</span> router = <span class="hljs-title class_">Router</span>()
+
+router.<span class="hljs-title function_">use</span>(<span class="hljs-string">&#x27;/btc&#x27;</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./btc&#x27;</span>)) <span class="hljs-comment">// Bitcoin</span>
+router.<span class="hljs-title function_">use</span>(<span class="hljs-string">&#x27;/lnd&#x27;</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./lnd&#x27;</span>)) <span class="hljs-comment">// Lightning</span>
+router.<span class="hljs-title function_">use</span>(<span class="hljs-string">&#x27;/sys&#x27;</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./sys&#x27;</span>)) <span class="hljs-comment">// System and general information</span>
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = router
+</code></pre>
+<p>All of these are mounted under the <code>/api</code> scope; giving us routes like</p>
+<pre><code class="language-sh">/api/btc/blockchaininfo  <span class="hljs-comment"># How&#x27;s the blockchain?</span>
+/api/lnd/balance         <span class="hljs-comment"># What&#x27;s in my purse?</span>
+/api/sys                 <span class="hljs-comment"># Annie, are you ok?</span>
+</code></pre>
+<h3 id="the-bitcoin-api"><a class="header-anchor" href="#the-bitcoin-api">#</a> The Bitcoin API</h3>
+<p>The simplified version of the <code>btc.js</code> file, which contains the Bitcoin API, looks like this:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">Router</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express&#x27;</span>)
+<span class="hljs-keyword">const</span> bitcoind = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./service&#x27;</span>)
+<span class="hljs-keyword">const</span> router = <span class="hljs-title class_">Router</span>()
+
+<span class="hljs-comment">// RPC method reference: https://git.io/fhAOx</span>
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">ROUTES</span> = [
+  [<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;/blockchaininfo&#x27;</span>, <span class="hljs-string">&#x27;getBlockchainInfo&#x27;</span>],
+  [<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;/block/:header&#x27;</span>, <span class="hljs-string">&#x27;getBlock&#x27;</span>, <span class="hljs-function"><span class="hljs-params">req</span> =&gt;</span> req.<span class="hljs-property">params</span>.<span class="hljs-property">header</span>]
+  <span class="hljs-comment">// other routes would go here …</span>
+]
+
+<span class="hljs-variable constant_">ROUTES</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">[method, route, rpc, getPayload]</span>) =&gt;</span> {
+  router[method](route, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">const</span> payload = getPayload &amp;&amp; <span class="hljs-title function_">getPayload</span>(req)
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> <span class="hljs-title function_">bitcoind</span>(rpc, payload)
+      res.<span class="hljs-title function_">json</span>(result)
+    } <span class="hljs-keyword">catch</span> (err) {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error:&#x27;</span>, err)
+      res.<span class="hljs-title function_">status</span>(<span class="hljs-number">500</span>).<span class="hljs-title function_">send</span>(err.<span class="hljs-property">message</span>)
+    }
+  })
+})
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = router
+</code></pre>
+<p>There are some things to unpack here: The RPC library details are encapsulated in a service module, which we will have a look at in a minute.</p>
+<p>First let’s look at the <code>ROUTES</code> constant, defining an array of route configurations;
+each being itself an array with at least three values: The request method, the API endpoint path, the name of the associated RPC and an optional function to resolve the payload.</p>
+<p>Why so seemingly complicated?
+<mark>It allows us to process each of the different request uniformly, as we see in the <code>map</code> function which defined the actual Express routes:</mark>
+<code>router[method](route, ...)</code> in the <code>map</code> becomes a shorthand for calling <code>router.get('/blockchaininfo', ...)</code> and the like individually.<br>
+JavaScript’s destructuring features let us use the array as a minimalistic data structure for defining the routes and accessing its properties in the <code>map</code> call.</p>
+<h4 id="keep-it-simple"><a class="header-anchor" href="#keep-it-simple">#</a> Keep it simple</h4>
+<p>As each of the request handlers looks the same, this is a concise way of defining routes by just mapping the request method and path to a particular RPC method:
+If the RPC method needs arguments, they are taken from the request via the optional <code>getPayload</code> function.
+The RPC is invoked – the result or error being sent to the client.</p>
+<p>This way adding a new route/RPC mapping becomes a one-liner.
+In the upcoming LND API example we will also see how a slight modification allows us to aggregate the result of multiple RPCs into a single response.</p>
+<h3 id="service-modules-for-encapsulating-third-party-logic"><a class="header-anchor" href="#service-modules-for-encapsulating-third-party-logic">#</a> Service modules for encapsulating third-party logic</h3>
+<p>The RPC modules for Bitcoin Core and LND export a single function, which takes the name of the RPC function and the payload coming from the request params or body as arguments.
+The modules contain all the details of working with the particular client library (<code>bitcoind-rpc</code> and <code>ln-service</code>).
+Both modules look mostly the same, here is the LND service example:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;assert&#x27;</span>)
+<span class="hljs-keyword">const</span> lnService = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;ln-service&#x27;</span>)
+
+<span class="hljs-keyword">const</span> {
+  <span class="hljs-attr">LND_RPC_HOST</span>: host = <span class="hljs-string">&#x27;localhost&#x27;</span>,
+  <span class="hljs-attr">LND_RPC_PORT</span>: rpcPort = <span class="hljs-number">10009</span>,
+  <span class="hljs-attr">LND_CERT_BASE64</span>: cert,
+  <span class="hljs-attr">LND_MACAROON_BASE64</span>: macaroon
+} = process.<span class="hljs-property">env</span>
+
+<span class="hljs-title function_">assert</span>(cert &amp;&amp; macaroon, <span class="hljs-string">&#x27;Provide the LND_CERT_BASE64 and LND_MACAROON_BASE64 environment variables.&#x27;</span>)
+
+<span class="hljs-keyword">const</span> socket = <span class="hljs-string">`<span class="hljs-subst">${host}</span>:<span class="hljs-subst">${rpcPort}</span>`</span>
+<span class="hljs-keyword">const</span> options = { socket, cert, macaroon }
+<span class="hljs-keyword">const</span> lnd = lnService.<span class="hljs-title function_">lightningDaemon</span>(options)
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = <span class="hljs-function">(<span class="hljs-params">fnName, opts = {}</span>) =&gt;</span>
+  <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+    <span class="hljs-keyword">try</span> {
+      opts.<span class="hljs-property">lnd</span> = lnd
+      <span class="hljs-keyword">const</span> fn = lnService[fnName]
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> fn === <span class="hljs-string">&#x27;function&#x27;</span>) {
+        <span class="hljs-title function_">fn</span>(opts, <span class="hljs-function">(<span class="hljs-params">err, result</span>) =&gt;</span> {
+          err ? <span class="hljs-title function_">reject</span>(err) : <span class="hljs-title function_">resolve</span>(result)
+        })
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-title function_">reject</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">`<span class="hljs-subst">${fnName}</span> is not a LND service function.`</span>))
+      }
+    } <span class="hljs-keyword">catch</span> (err) {
+      <span class="hljs-title function_">reject</span>(err)
+    }
+  })
+</code></pre>
+<p>The first part configures the service:
+As the dashboard app is a third party tool you will need to provide some configuration, in this case via environment variables like <code>LND_MACAROON_BASE64</code>.
+For the time being the <code>admin.macaroon</code> file is needed – 
+but I hope in the future there will be more fine grained control over the permissions you entrust third-party apps via macaroons.</p>
+<p>The second part does the actual work:
+It invokes the RPC method passed as the first argument via the client library and resolves the promise with the result or rejects it with an error.
+Even though <a href="https://github.com/alexbosworth/ln-service#using-grpc">ln-service supports promises</a> I decided to use the callback based functions and promisify them myself.
+Each promise-based function is a separate module in ln-service and I found it to be nicer to work with this way, instead of dynamically requiring the individual function modules.</p>
+<h3 id="the-lnd-api"><a class="header-anchor" href="#the-lnd-api">#</a> The LND API</h3>
+<p>Alright, now that you know the basic structure of the Bitcoin API module, here is a slightly more complex excerpt form the LND API.<br>
+Part one of the <code>lnd.js</code> contains the route definitions:</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">Router</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express&#x27;</span>)
+<span class="hljs-keyword">const</span> lnd = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./service&#x27;</span>)
+<span class="hljs-keyword">const</span> router = <span class="hljs-title class_">Router</span>()
+
+<span class="hljs-comment">// RPC Reference: https://git.io/fhAOh</span>
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">ROUTES</span> = [
+  <span class="hljs-comment">// Wallet information</span>
+  [<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;/info&#x27;</span>, <span class="hljs-string">&#x27;getWalletInfo&#x27;</span>],
+  [<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;/balance&#x27;</span>, [<span class="hljs-string">&#x27;getChainBalance&#x27;</span>, <span class="hljs-string">&#x27;getPendingChainBalance&#x27;</span>]],
+
+  <span class="hljs-comment">// List of peers</span>
+  [<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;/peers&#x27;</span>, <span class="hljs-string">&#x27;getPeers&#x27;</span>],
+
+  <span class="hljs-comment">// Add a peer</span>
+  [<span class="hljs-string">&#x27;post&#x27;</span>, <span class="hljs-string">&#x27;/peers&#x27;</span>, <span class="hljs-string">&#x27;addPeer&#x27;</span>, <span class="hljs-function"><span class="hljs-params">req</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> [public_key, socket] = req.<span class="hljs-property">body</span>.<span class="hljs-property">addr</span>.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;@&#x27;</span>)
+    <span class="hljs-keyword">return</span> { public_key, socket }
+  }],
+
+  <span class="hljs-comment">// Remove a peer</span>
+  [<span class="hljs-string">&#x27;delete&#x27;</span>, <span class="hljs-string">&#x27;/peers/:public_key&#x27;</span>, <span class="hljs-string">&#x27;removePeer&#x27;</span>, <span class="hljs-function"><span class="hljs-params">req</span> =&gt;</span> req.<span class="hljs-property">params</span>]
+]
+</code></pre>
+<p>Here are the differences to the Bitcoin example:</p>
+<ul>
+<li>The third entry in the route definition array might be an array, which lists multiple RPCs to be invoked.
+(e.g. <code>getChainBalance</code> and <code>getPendingChainBalance</code> for the <code>/balance</code> route)</li>
+<li>The routes now also contain modifying and destructive API endpoints for adding and removing peer nodes.
+Both of them require user input (e.g. the peers address or public key), which gets provided via the request params or form body.</li>
+</ul>
+<p>Again, part two instantiates the Express routes based on the definitions above:</p>
+<pre><code class="language-js"><span class="hljs-variable constant_">ROUTES</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">[method, route, rpc, getPayload]</span>) =&gt;</span> {
+  router[method](route, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">const</span> payload = getPayload &amp;&amp; <span class="hljs-title function_">getPayload</span>(req)
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">let</span> result
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> rpc === <span class="hljs-string">&#x27;object&#x27;</span>) {
+        <span class="hljs-keyword">const</span> calls = <span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>(rpc.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> <span class="hljs-title function_">lnd</span>(c, payload)))
+        result = calls.<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">res, callRes</span>) =&gt;</span> <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">assign</span>(res, callRes), {})
+      } <span class="hljs-keyword">else</span> {
+        result = <span class="hljs-keyword">await</span> <span class="hljs-title function_">lnd</span>(rpc, payload)
+      }
+      res.<span class="hljs-title function_">json</span>(result)
+    } <span class="hljs-keyword">catch</span> (err) {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">&#x27;Error:&#x27;</span>, err)
+      <span class="hljs-keyword">const</span> [status, message, info] = err
+      <span class="hljs-keyword">const</span> msg = info ? info.<span class="hljs-property">details</span> : (message || err.<span class="hljs-property">message</span>)
+      res.<span class="hljs-title function_">status</span>(status || <span class="hljs-number">500</span>).<span class="hljs-title function_">send</span>(msg)
+    }
+  })
+})
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = router
+</code></pre>
+<p>The <code>try</code> block checks whether or not multiple RPC calls need to be invoked.
+If so, the results are merged into a single response object, which then gets sent as JSON.</p>
+<p>The <code>catch</code> block contains the error handling part.
+A nice thing about <code>ln-service</code> is, that it provides detailed error information and even HTTP status codes:
+In case something goes wrong we can leverage that to give the API client and user a better impression of what happened.</p>
+<h2 id="conclusion"><a class="header-anchor" href="#conclusion">#</a> Conclusion</h2>
+<p>I did not expect this article to become that long, but I hope it helps fellow developers building apps on top of Bitcoin and the Lightning Network.</p>
+<p>In case this article has left you wanting to read more code:
+Take a look at the <a href="https://github.com/Casa/Casa-Node-API">Casa-Node-API repository</a>, which Casa recently open sourced.
+Their approach is similar and they are also using the Node.js/Express plus Vue.js combo, which I have come to love.</p>
+<p>In general, the Bitcoin and LND RPC APIs are nice to work with and the third-party libs make it even easier.
+I find it exciting to be tinkering with technology that will potentially affect an evergrowing audience of people.
+The future for both Bitcoin and Lightning look bright and we can help to shape it for generations to come.
+My hope is to contribute on the UX/UI side of this, while I am also delving deeper into the protocol level.</p>
+</div><form method="POST" action="https://pay.d11n.net/api/v1/invoices" class="say-thanks">
+<input type="hidden" name="storeId" value="7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT" />
+<input type="hidden" name="browserRedirect" value="https://d11n.net/thankyou.html" />
+<input type="hidden" name="notifyEmail" value="mail@d11n.net" />
+<input type="hidden" name="currency" value="SATS" />
+<span>Liked this? Say <em>thanks</em> with</span>
+<input id="btcpay-input-price" type="number" name="price" min="1" step="1" value="21" />
+<span>sats.</span>
+<button type="submit" class="cta" name="submit">Donate</button>
+</form></div></main><footer class="footer"><div class="wrap"><p>Follow  <a href="/about.html">me</a> on <a href="https://bitcoinhackers.org/@d11n">Mastodon</a>, <a href="https://twitter.com/_d11n_">Twitter</a> or <a href="https://github.com/DennisReimann">GitHub</a>.</p></div><div class="wrap"><p>Published at block height <time datetime="2019-03-01">565217</time>. <a href="https://github.com/dennisreimann/d11n.net/blob/master/articles/565217-bitcoin-lnd-rpc-api-express.md">(GitHub)</a></p><p>Website last updated at block height <time datetime="2021-06-10">687022</time>.</p></div></footer></body></html>
