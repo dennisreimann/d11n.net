@@ -32,7 +32,7 @@ jobs:
       env:
         CI: true
     - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
-      env:
-        BUILD_DIR: dist/
-        GH_PAT: ${{ secrets.GH_PAT }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./dist
+        github_token: ${{ secrets.GH_PAT }}
