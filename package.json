@@ -13,7 +13,7 @@
     "start": "npm-run-all clean init -p start:*",
     "start:articles": "onchange -i -k 'articles/**/*' 'includes/**/*' -- npm run build:articles",
     "start:data": "onchange -k 'site-data.json' 'pug.config.js' 'markdown.js' -- npm run build:pages",
-    "start:pages": "npm run build:pages -- --watch --pretty",
+    "start:pages": "onchange -i -k 'pages/**/*' -- npm run build:pages -- --watch --pretty",
     "start:styles": "npm-run-all -p 'build:styles:* -- --watch'",
     "start:serve": "browser-sync start --config browser-sync.config.js --watch",
     "build": "npm-run-all clean init -p build:* -s optimize",
