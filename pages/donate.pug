@@ -22,15 +22,15 @@ block body
         .btcpay-form--block select { margin-bottom: 10px; }
         .btcpay-form .btcpay-custom { display: flex; align-items: center; justify-content: center; }
         .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: var(--color-neutral-50); height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto; }
-        .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; background: transparent; color: var(--color-white); border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; }
+        .btcpay-form select { width: 5rem; -moz-appearance: none; -webkit-appearance: none; appearance: none; color: var(--color-neutral-50); text-align: center; background: transparent; border: 1px solid transparent; display: block; padding: .4rem .25rem; margin-left: auto; margin-right: auto; font-size: 1rem; cursor: pointer; }
         .btcpay-form select:hover { border-color: #ccc; }
-        #btcpay-input-price { width: 4.5em; -moz-appearance: textfield; -webkit-appearance: none; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; margin: 0 5px; background: #fff; }
+        #btcpay-input-price { width: 209px; text-align: right; border: none; box-shadow: none; text-align: center; font-size: 2rem; margin: auto; border-radius: 5px; background: #fff; }
       script.
         window.donation = {
-          btcInitial: 0.001,
-          btcStep: 0.0005,
-          btcMin: 0.0005,
-          satsInitial: 100000,
+          btcInitial: 0.00021,
+          btcStep: 0.00001,
+          btcMin: 0.00001,
+          satsInitial: 21000,
           satsStep: 1000,
           satsMin: 1000,
           fiatInitial: 5,
@@ -42,27 +42,6 @@ block body
           },
           isSats () {
             return document.querySelector('#btcpay-currency').value === 'SATS';
-          },
-          onDecrement () {
-            const isBTC = this.isBTC();
-            const isSats = this.isSats();
-            const input = document.querySelector('#btcpay-input-price');
-            const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
-            const step = isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep);
-            const min = isBTC ? this.btcMin : (isSats ? this.satsMin : this.fiatMin);
-            const val = price - step;
-            const value = val < min ? min : val;
-            input.value = isBTC ? value.toFixed(4) : value;
-          },
-          onIncrement () {
-            const isBTC = this.isBTC();
-            const isSats = this.isSats();
-            const currency = document.querySelector('#btcpay-currency').value;
-            const input = document.querySelector('#btcpay-input-price');
-            const price = isBTC ? Number.parseFloat(input.value) : parseInt(input.value);
-            const step = isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep);
-            const value = price + step;
-            input.value = isBTC ? value.toFixed(4) : value;
           },
           onCurrency () {
             const isBTC = this.isBTC();
@@ -78,19 +57,13 @@ block body
         <input type="hidden" name="storeId" value="7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT" />
         <input type="hidden" name="browserRedirect" value="https://d11n.net/thankyou.html" />
         <input type="hidden" name="notifyEmail" value="mail@d11n.net" />
-        <div>
-          <div class="btcpay-custom">
-            <button class="plus-minus" type="button" onclick="donation.onDecrement()">-</button>
-            <input id="btcpay-input-price" type="number" name="price" min="1000" step="1000" value="100000" />
-            <button class="plus-minus" type="button" onclick="donation.onIncrement()">+</button>
-          </div>
-          <select id="btcpay-currency" name="currency" oninput="donation.onCurrency()">
-            <option value="SATS" selected>SATS</option>
-            <option value="BTC">BTC</option>
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-          </select>
-        </div>
+        <input id="btcpay-input-price" type="number" name="price" min="1000" step="1000" value="21000" />
+        <select id="btcpay-currency" name="currency" oninput="donation.onCurrency()">
+          <option value="SATS" selected>SATS</option>
+          <option value="BTC">BTC</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+        </select>
         <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BTCPay, Self-Hosted Bitcoin Payment Processor">
       </form>
 
