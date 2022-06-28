@@ -49,7 +49,7 @@
     "postcss-custom-media": "8.0.2",
     "postcss-import": "14.1.0",
     "postcss-media-variables": "2.0.1",
-    "postcss-nesting": "10.1.8",
+    "postcss-nesting": "10.1.9",
     "pug": "3.0.2",
     "sync-request": "6.1.0"
   }
