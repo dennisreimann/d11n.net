@@ -95,7 +95,7 @@ line-items .line-items,
   border-color: var(--color-accent);
   border-radius: var(--space-xs);
   padding: var(--space-xs) var(--space-s);
-  font-size: var(--font-size-m)
+  font-size: var(--font-size-m);
 }
 
 .action-button:hover,
@@ -134,7 +134,7 @@ line-items .line-items,
 .btnGroupLnd button {
   border: 0;
   color: var(--color-white);
-  background-color: var(--color-neutral-80)
+  background-color: var(--color-neutral-80);
 }
 
 .btnGroupLnd button:hover,
@@ -172,11 +172,11 @@ line-items .line-items,
 }
 
 .powered__by__btcpayserver {
-  color: var(--color-neutral-40)
+  color: var(--color-neutral-40);
 }
 
 .powered__by__btcpayserver a {
-    color: inherit
+    color: inherit;
   }
 
 .powered__by__btcpayserver a:hover {
