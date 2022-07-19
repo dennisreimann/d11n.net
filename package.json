@@ -32,10 +32,10 @@
   "devDependencies": {
     "autoprefixer": "10.4.7",
     "browser-sync": "2.27.10",
-    "csso-cli": "3.0.0",
+    "csso-cli": "4.0.1",
     "glob": "8.0.3",
     "gray-matter": "4.0.3",
-    "highlight.js": "11.5.1",
+    "highlight.js": "11.6.0",
     "jstransformer-markdown-it": "2.1.0",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.4",
@@ -48,7 +48,6 @@
     "postcss-cli": "10.0.0",
     "postcss-custom-media": "8.0.2",
     "postcss-import": "14.1.0",
-    "postcss-media-variables": "2.0.1",
     "postcss-nesting": "10.1.10",
     "pug": "3.0.2",
     "sync-request": "6.1.0"
