@@ -30,13 +30,13 @@
     "prod": "npm-run-all build optimize sitemap"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.7",
+    "autoprefixer": "10.4.8",
     "browser-sync": "2.27.10",
     "csso-cli": "4.0.1",
     "glob": "8.0.3",
     "gray-matter": "4.0.3",
     "highlight.js": "11.6.0",
-    "jstransformer-markdown-it": "2.1.0",
+    "jstransformer-markdown-it": "3.0.0",
     "markdown-it": "13.0.1",
     "markdown-it-anchor": "8.6.4",
     "markdown-it-implicit-figures": "0.10.0",
