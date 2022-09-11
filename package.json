@@ -47,7 +47,7 @@
     "postcss-calc": "8.2.4",
     "postcss-cli": "10.0.0",
     "postcss-custom-media": "8.0.2",
-    "postcss-import": "14.1.0",
+    "postcss-import": "15.0.0",
     "postcss-nesting": "10.1.10",
     "pug": "3.0.2",
     "sync-request": "6.1.0"
