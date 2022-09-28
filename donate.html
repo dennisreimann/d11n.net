@@ -11,55 +11,37 @@ contributions I made to <a href="https://btcpayserver.org">BTCPayServer</a> …<
 <p>Here you have the chance to say “Thank You!” by paying for my coffee, buy me a beer
 or help me feed our cat, dog and kids.
 Whatever you give, I really appreciate your kindness and the virtual pat on the back!</p>
-<div class="form-note"><style>.btcpay-form { display: inline-flex; align-items: center; justify-content: center; margin-bottom: 2em; }
-.btcpay-form--inline { flex-direction: row; }
-.btcpay-form--block { flex-direction: column; }
-.btcpay-form--inline .submit { margin-left: 15px; }
-.btcpay-form--block select { margin-bottom: 10px; }
-.btcpay-form .btcpay-custom { display: flex; align-items: center; justify-content: center; }
-.btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: var(--color-neutral-50); height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto; }
-.btcpay-form select { width: 5rem; -moz-appearance: none; -webkit-appearance: none; appearance: none; color: var(--color-neutral-50); text-align: center; background: transparent; border: 1px solid transparent; display: block; padding: .4rem .25rem; margin-left: auto; margin-right: auto; font-size: 1rem; cursor: pointer; }
-.btcpay-form select:hover { border-color: #ccc; }
-#btcpay-input-price { width: 209px; text-align: right; border: none; box-shadow: none; text-align: center; font-size: 2rem; margin: auto; border-radius: 5px; background: #fff; }</style><script>window.donation = {
-  btcInitial: 0.00021,
-  btcStep: 0.00001,
-  btcMin: 0.00001,
+<div class="form-note"><style>.btcpay-form { display: flex; align-items: center; flex-wrap: wrap; gap: 1em; margin-bottom: 2em; }
+.btcpay-form div { display: flex; align-items: center; }
+.btcpay-form select { width: auto; height: 57px; margin-left: .25em; -moz-appearance: none; -webkit-appearance: none; appearance: none; color: var(--color-neutral-50); text-align: center; background: transparent; border: 1px solid transparent; display: block; padding: .4rem .25rem; margin-left: auto; margin-right: auto; font-size: 1rem; cursor: pointer; }
+.btcpay-form select:hover { border-color: var(--color-neutral-25); }
+#btcpay-input-price { width: 209px; height: 57px; text-align: right; border: none; box-shadow: none; text-align: center; font-size: 2rem; margin: auto; border-radius: 5px; background: #fff; }</style><script>window.donation = {
   satsInitial: 21000,
-  satsStep: 1000,
-  satsMin: 1000,
   fiatInitial: 5,
-  fiatStep: 1,
-  fiatMin: 1,
 
-  isBTC () {
-    return document.querySelector('#btcpay-currency').value === 'BTC';
-  },
   isSats () {
     return document.querySelector('#btcpay-currency').value === 'SATS';
   },
   onCurrency () {
-    const isBTC = this.isBTC();
     const isSats = this.isSats();
     const input = document.querySelector('#btcpay-input-price');
-    input.setAttribute("min", isBTC ? this.btcMin : (isSats ? this.satsMin : this.fiatMin));
-    input.setAttribute("step", isBTC ? this.btcStep : (isSats ? this.satsStep : this.fiatStep));
-    input.value = isBTC ? this.btcInitial : (isSats ? this.satsInitial : this.fiatInitial);
+    input.value = isSats ? this.satsInitial : this.fiatInitial;
   }
 }
-</script><form method="POST" action="https://pay.d11n.net/api/v1/invoices" class="btcpay-form btcpay-form--block">
+</script><form method="POST" action="https://pay.d11n.net/api/v1/invoices" class="btcpay-form">
 <input type="hidden" name="storeId" value="7KTuEPBt882hPvictRVqzwHwaFrD2qXQ5bSF9dxtTMxT" />
 <input type="hidden" name="browserRedirect" value="https://d11n.net/thankyou.html" />
-<input type="hidden" name="notifyEmail" value="mail@d11n.net" />
-<input id="btcpay-input-price" type="number" name="price" min="1000" step="1000" value="21000" />
+<div>
+<input id="btcpay-input-price" type="number" name="price" min="1" step="1" value="21000" />
 <select id="btcpay-currency" name="currency" oninput="donation.onCurrency()">
 <option value="SATS" selected>SATS</option>
-<option value="BTC">BTC</option>
 <option value="EUR">EUR</option>
 <option value="USD">USD</option>
 </select>
+</div>
 <input type="image" class="submit" name="submit" src="/images/pay.svg" style="width:209px" alt="Pay with BTCPay, Self-Hosted Bitcoin Payment Processor">
 </form><script>const [, a, c] = window.location.search.match(/([\d|.]+)(\w+)/) || []
-if (a && ['SATS', 'BTC', 'EUR', 'USD'].includes(c)) {
+if (a && ['SATS', 'EUR', 'USD'].includes(c)) {
   document.querySelector('#btcpay-currency').value = c;
   donation.onCurrency();
   document.querySelector('#btcpay-input-price').value = a;
@@ -70,4 +52,4 @@ This is a monthly recurring donation via fiat money.</p>
 <a href="lightning:LNURL1DP68GURN8GHJ7AMPD3KX2AR0VEEKZAR0WD5XJTNRDAKJ7TNHV4KXCTTTDEHHWM30D3H82UNVWQHKXUN0WAJX2ER9V9E8G6PN8QSKVTEZ">via Lightning</a>.</p>
 <a href="lightning:LNURL1DP68GURN8GHJ7AMPD3KX2AR0VEEKZAR0WD5XJTNRDAKJ7TNHV4KXCTTTDEHHWM30D3H82UNVWQHKXUN0WAJX2ER9V9E8G6PN8QSKVTEZ">
 <img src="/lnurl.png" alt="LNURL1DP68GURN8GHJ7AMPD3KX2AR0VEEKZAR0WD5XJTNRDAKJ7TNHV4KXCTTTDEHHWM30D3H82UNVWQHKXUN0WAJX2ER9V9E8G6PN8QSKVTEZ" style="width:256px;">
-</a></div></div></div></main><footer class="footer"><div class="wrap"><p>Follow  <a href="/about.html">me</a> on <a href="https://twitter.com/_d11n_">Twitter</a> or <a href="https://github.com/dennisreimann">GitHub</a>.</p></div><div class="wrap"><p>Website last updated at block height <time datetime="2022-09-11">753618</time>.</p></div></footer></body></html>
+</a></div></div></div></main><footer class="footer"><div class="wrap"><p>Follow  <a href="/about.html">me</a> on <a href="https://twitter.com/_d11n_">Twitter</a> or <a href="https://github.com/dennisreimann">GitHub</a>.</p></div><div class="wrap"><p>Website last updated at block height <time datetime="2022-09-28">756041</time>.</p></div></footer></body></html>
