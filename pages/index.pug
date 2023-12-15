@@ -1,0 +1,13 @@
+extends /template.pug
+
+block body
+  h2 Articles
+
+  ul.articles
+    each article in siteData.articles
+      li
+        a(href=`/${article.name}.html`)
+          .teaser(style=`background-image:url(${article.teaser})`)
+          .content
+            h4= article.title
+            time.block(datetime=article.date)= article.block

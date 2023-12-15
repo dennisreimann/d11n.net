@@ -1,0 +1,134 @@
+@import 'base.css';
+
+html, .modal.page {
+  color: var(--color-white);
+  background: var(--color-neutral-80);
+}
+.top-header { background-color: var(--color-neutral-95); }
+.top-header .timer-row__progress-bar {background:#eeff00;}
+.top-header .timer-row {
+  color: var(--color-neutral-95);
+  background: var(--color-neutral-20);
+}
+.top-header .timer-row__spinner svg {
+  fill: var(--color-neutral-95);
+}
+.close-icon { color: var(--color-white); }
+.payment-tabs__slider {background: #eeff00; }
+.separatorGem {background: #eeff00;}
+
+line-items,
+line-items .line-items,
+.modal-content,
+.currency-selection,
+.single-item-order,
+.payment-tabs,
+.copyBox,
+.copySectionBox.bottomBorder,
+#prettydropdown-DefaultLang ul {
+  color: var(--color-white);
+  background: var(--color-neutral-90);
+  border-color: var(--color-neutral-70);
+}
+
+.payment-tabs {
+  background: var(--color-neutral-80);
+}
+.payment-tabs__tab.active {
+  background: var(--color-neutral-70);
+}
+
+.action-button {
+  color: var(--color-neutral-95);
+  background: var(--color-accent);
+  transition-property: color, background;
+  transition-duration: var(--transition-duration-fast);
+  border-color: var(--color-accent);
+  border-radius: var(--space-xs);
+  padding: var(--space-xs) var(--space-s);
+  font-size: var(--font-size-m);
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: var(--color-neutral-95);
+    background: var(--color-accent-highlight);
+  }
+}
+.action-button:active,
+.action-button.active,
+.open>.action-button.dropdown-toggle {
+  color: #fff;
+  background-color: #eeff00;
+  border-color: #eeff00;
+}
+
+.action-button:active:hover,
+.action-button:active:focus,
+.action-button:active.focus,
+.action-button.active:hover,
+.action-button.active:focus,
+.action-button.active.focus,
+.open>.action-button.dropdown-toggle:hover,
+.open>.action-button.dropdown-toggle:focus,
+.open>.action-button.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #eeff00;
+  border-color: #eeff00;
+}
+
+.btnGroupLnd {
+  margin: var(--space-m) 0;
+}
+
+.btnGroupLnd button {
+  border: 0;
+  color: var(--color-white);
+  background-color: var(--color-neutral-80);
+
+  &:hover,
+  &.active,
+  &.active:hover {
+    background-color: var(--color-neutral-70);
+  }
+}
+
+.content-faded,
+.manual__step-one__instructions,
+.manual__step-two__instructions {
+  color: var(--color-neutral-40);
+}
+
+.copySectionBox label {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.checkoutTextbox {
+  border: 0;
+  border-radius: var(--space-xs);
+  color: var(--color-white);
+  background: var(--color-neutral-70);
+}
+
+.inputWithIcon img,
+.inputWithIcon i {
+  border: none;
+}
+
+.copyLabelPopup {
+  color: var(--color-white);
+  background: var(--color-neutral-70);
+}
+
+.powered__by__btcpayserver {
+  color: var(--color-neutral-40);
+
+  & a {
+    color: inherit;
+
+    &:hover {
+      color: var(--color-accent-highlight);
+    }
+  }
+}
