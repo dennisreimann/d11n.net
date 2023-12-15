@@ -1,4 +1,0 @@
-/.well-known/*
-  Access-Control-Allow-Origin: *
-/img/avatars/*
-  Access-Control-Allow-Origin: *
