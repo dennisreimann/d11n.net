@@ -14,4 +14,4 @@ const renderPage = (name, data = {}) => {
   writeFileSync(dst, rendered)
 }
 
-renderPage('index')
+//renderPage('index')
