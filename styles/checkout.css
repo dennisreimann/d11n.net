@@ -98,9 +98,7 @@ line-items .line-items,
   font-size: var(--font-size-m);
 }
 
-.action-button:hover,
-  .action-button:focus,
-  .action-button.focus {
+.action-button:hover,.action-button:focus,.action-button.focus {
     color: var(--color-neutral-95);
     background: var(--color-accent-highlight);
   }
@@ -137,9 +135,7 @@ line-items .line-items,
   background-color: var(--color-neutral-80);
 }
 
-.btnGroupLnd button:hover,
-  .btnGroupLnd button.active,
-  .btnGroupLnd button.active:hover {
+:is(.btnGroupLnd button):hover,.active:is(.btnGroupLnd button),.active:is(.btnGroupLnd button):hover {
     background-color: var(--color-neutral-70);
   }
 
@@ -179,6 +175,6 @@ line-items .line-items,
     color: inherit;
   }
 
-.powered__by__btcpayserver a:hover {
+:is(.powered__by__btcpayserver a):hover {
       color: var(--color-accent-highlight);
     }
