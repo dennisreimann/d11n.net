@@ -1,5 +1,4 @@
-/.well-known/lnurlp/donate    https://pay.d11n.net/.well-known/lnurlp/donate
-/.well-known/lnurlp/sats      https://pay.d11n.net/.well-known/lnurlp/sats
-/.well-known/lnurlp/zap       https://pay.d11n.net/.well-known/lnurlp/zap
-/donate                       https://donate.d11n.net
+/.well-known/lnurlp/donate    /.well-known/lnurlp/zap
+/.well-known/lnurlp/sats      /.well-known/lnurlp/zap
+/.well-known/lnurlp/zap       https://blitzbank.de/.well-known/lnurlp/zap
 /                             https://njump.me/npub14j7wc366rf8efqvnnm8m68pazy04kkj8fgu6uqumh3eqlhfst0kqrngtpf
