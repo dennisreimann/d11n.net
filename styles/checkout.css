@@ -40,29 +40,21 @@
   --transition-duration-medium: .75s;
   --transition-duration-slow: 1.5s;
 }
-
 html, .modal.page {
   color: var(--color-white);
   background: var(--color-neutral-80);
 }
-
 .top-header { background-color: var(--color-neutral-95); }
-
 .top-header .timer-row__progress-bar {background:#eeff00;}
-
 .top-header .timer-row {
   color: var(--color-neutral-95);
   background: var(--color-neutral-20);
 }
-
 .top-header .timer-row__spinner svg {
   fill: var(--color-neutral-95);
 }
-
 .close-icon { color: var(--color-white); }
-
 .payment-tabs__slider {background: #eeff00; }
-
 .separatorGem {background: #eeff00;}
 
 line-items,
@@ -82,7 +74,6 @@ line-items .line-items,
 .payment-tabs {
   background: var(--color-neutral-80);
 }
-
 .payment-tabs__tab.active {
   background: var(--color-neutral-70);
 }
@@ -102,7 +93,6 @@ line-items .line-items,
     color: var(--color-neutral-95);
     background: var(--color-accent-highlight);
   }
-
 .action-button:active,
 .action-button.active,
 .open>.action-button.dropdown-toggle {
