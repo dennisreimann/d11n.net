@@ -1,4 +1,6 @@
 /.well-known/*
   Access-Control-Allow-Origin: *
+/.well-known/keysend/*
+  Content-Type: application/json
 /img/avatars/*
   Access-Control-Allow-Origin: *
